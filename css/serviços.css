@@ -1,0 +1,924 @@
+/* ======================
+        serviços
+====================== */
+/* Configurações gerais do Header */
+
+header {
+    width: 100%;
+    background: var(--color-base-800);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: .3s;
+}
+
+.container-header {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 40px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 135px;
+    display: block;
+    cursor: pointer;
+}
+
+/* ===========================================
+                Menu Desktop
+  ============================================ */
+.menu-desktop {
+    display: flex;
+    align-items: center;
+}
+
+.menu-desktop ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-desktop ul li {
+    display: flex;
+    align-items: center;
+}
+
+.menu-desktop ul li a {
+    text-decoration: none;
+    color: var(--color-text-white);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 400;
+    transition: .3s ease;
+    position: relative;
+}
+
+/* ===========================================
+                Configurações Links
+  ============================================ */
+
+.menu-desktop ul li a i,
+.menu-desktop ul li a svg {
+    color: var(--color-base-400);
+    transition: .3s ease;
+}
+
+/* hover */
+
+.menu-desktop ul li a:hover {
+    color: var(--color-text-purewhite);
+}
+
+/* ÍCONE MAIS ILUMINADO NO HOVER */
+
+.menu-desktop ul li a:hover i,
+.menu-desktop ul li a:hover svg {
+    color: var(--color-base-300);
+}
+
+/* Linha abaixo de link em tom dourado */
+
+.menu-desktop ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 1px;
+    background: var(--color-base-400);
+    transition: .3s ease;
+}
+
+.menu-desktop ul li a:hover::after {
+    width: 100%;
+}
+
+/* ===========================================
+                Barra de Pesquisa
+  ============================================ */
+
+.search-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    width: 220px;
+    height: 40px;
+    border: 1px solid var(--color-base-400);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--color-text-white);
+    padding: 0 15px;
+}
+
+.search-box input::placeholder {
+    color: var(--color-text-white);
+}
+
+.search-box button {
+    width: 50px;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: var(--color-base-400);
+    cursor: pointer;
+}
+
+/* ===========================================
+                     Bandeiras
+  ============================================ */
+.flags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.flags img {
+    width: 28px;
+    height: 20px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* ===========================================
+                    Menu mobile
+  ============================================ */
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: var(--color-base-400);
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    /* esconde totalmente */
+    width: 280px;
+    height: 100vh;
+    background: var(--color-base-800);
+    transition: .4s ease;
+    padding: 30px;
+    z-index: 10000;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+/* botão de fechar */
+.mobile-menu .close-btn {
+    text-align: right;
+    margin-bottom: 50px;
+}
+
+/* Icon */
+.mobile-menu .close-btn i {
+    font-size: 45px;
+    color: var(--color-base-400);
+    cursor: pointer;
+}
+
+/* ===========================================
+            Bandeiras Mobile
+=========================================== */
+
+.flags-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 50px;
+}
+
+.flags-mobile img {
+    width: 32px;
+    height: 22px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* container de links menu mobile */
+.mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+/* links do menu */
+.mobile-menu ul li {
+    width: 100%;
+}
+
+/* links do mobile */
+.mobile-menu ul li a {
+    text-decoration: none;
+    color: var(--color-text-white);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: .3s ease;
+    position: relative;
+}
+
+/* código para linha amarela animada */
+
+.mobile-menu ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 1px;
+    background: var(--color-base-400);
+    transition: .3s ease;
+}
+
+.mobile-menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* ícones menu hamburguer */
+.mobile-menu ul li a i,
+.mobile-menu ul li a svg {
+    color: var(--color-base-400);
+    transition: .3s ease;
+}
+
+/* hover. svg -para pacote de icons funcionar */
+.mobile-menu ul li a:hover {
+    color: var(--color-text-purewhite);
+}
+
+.mobile-menu ul li a:hover i,
+.mobile-menu ul li a:hover svg {
+    color: var(--color-base-300);
+}
+
+/* overlay auxiliar do menu -sombra ao abrir o menu*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 9998;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* efeito do header */
+header.scrolled {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustando resposividade de menu mobile*/
+@media(max-width: 950px) {
+
+    .menu-desktop,
+    .search-area {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .container-header {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 95px;
+    }
+}
+
+.banner {
+    position: relative;
+
+    width: 100%;
+    height: 600px;
+
+    /* gradiente de cores para tirar o destaque da imagem e focar no titulo */
+    background-image:
+        linear-gradient(to right,
+
+            rgba(245, 238, 230, 0.35) 60%,
+            rgba(245, 238, 230, 0.05) 100%),
+        url(../assets/images/banner-serviços.png);
+    /* ajustando imagem */
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+/* ===========================================
+                topbar abanner
+=========================================== */
+
+.banner-topbar {
+    width: 100%;
+    position: absolute;
+    top: 105px;
+    left: 0;
+    z-index: 3;
+}
+
+.banner-topbar-content {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.banner-topbar-content span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-topBar);
+    white-space: nowrap;
+}
+
+.banner-topbar-content i {
+    color: var(--color-base-600);
+    font-size: 13px;
+}
+
+.separator {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+/* ===========================================
+        topBarMobile com animação
+=========================================== */
+
+@media(max-width: 950px) {
+
+    .banner-topbar {
+        overflow: hidden;
+    }
+
+    .banner-topbar-content {
+        width: max-content;
+        flex-wrap: nowrap;
+        padding: 0 25px;
+
+        animation: topbarScroll 22s linear infinite;
+    }
+
+    .banner-topbar-content span {
+        font-size: 13px;
+    }
+
+}
+
+/* ===========================================
+               banner
+=========================================== */
+
+.banner-content {
+    max-width: 600px;
+    padding-top: 140px;
+}
+
+.banner-content h1 {
+    font-size: 50px;
+    line-height: 1.1;
+    color: var(--color-text-primary);
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-text-topBar);
+    margin-bottom: 35px;
+}
+
+#span-gold-banner {
+    color: var(--color-base-400);
+}
+
+/* ===========================================
+                RESPONSIVO
+=========================================== */
+
+@media(max-width: 950px) {
+    .banner {
+        height: auto;
+        padding: 140px 25px 90px;
+        background-position: 72%;
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+        line-height: 1.1;
+        color: var(--color-text-primary);
+        margin-bottom: 25px;
+    }
+}
+
+/* ==========================
+serviços section rosa
+======================== */
+.section-servicos {
+    background: var(--color-primary-dark);
+}
+
+.section-servicos h2 {
+    color: var(--color-text-white);
+    font-size: 36px;
+}
+
+.section-servicos p {
+    color: var(--color-text-white);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ==========================
+serviços-tratamentos
+============================= */
+.tratamentos-section {
+    padding: 100px 0;
+    background:
+        url("../assets/images/background-avaliações.png") center center/cover no-repeat;
+}
+
+.subtitulo-tratamentos {
+    font-size: 18px;
+    color: var(--color-text-primary);
+}
+
+.titulo-tratamentos {
+    font-size: 36px;
+    color: var(--color-text-primary);
+    margin-top: 5px;
+}
+
+.btn-filtro {
+    background: var(--color-base-800);
+    color: var(--color-text-white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.btn-filtro.active {
+    background: var(--color-base-500);
+}
+
+.btn-vermais {
+    background: var(--color-base-800);
+    color: var(--color-text-white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.btn-vermais:hover {
+    background: var(--color-base-801);
+    color: var(--color-text-white);
+}
+
+.carousel-inner {
+    transition: .3s;
+    min-height: 470px;
+    /* definindo tamanho fixo para não 'tremer' a tela */
+}
+
+.carousel-item {
+    padding: 10px 60px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+}
+
+.carousel-control-prev {
+    left: -35px;
+}
+
+.carousel-control-next {
+    right: -35px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    opacity: 1;
+}
+
+/* círculo em volta da seta*/
+.seta-carousel {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+
+}
+
+/* ícone */
+.seta-carousel i {
+    font-size: 22px;
+    color: var(--color-primary-gold);
+}
+
+/* hover */
+.seta-carousel:hover {
+    background: rgba(255, 255, 255, 0.95);
+
+}
+
+.cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.img-card-servico {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+
+    border-radius: 12px;
+    display: block;
+}
+
+.tratamentos-section .card {
+    background: var(--color-base-500);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    /* cria a moldura */
+    overflow: hidden;
+}
+
+.tratamentos-section .card-body {
+    background: transparent;
+}
+
+.card-title {
+    color: var(--color-text-primary);
+    font-size: 18px;
+}
+
+.card-text {
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.preco-servico {
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+.tratamentos-section .card {
+    width: 263px;
+    height: 430px;
+}
+
+
+@media(max-width:768px) {
+
+    .tratamentos-section .card {
+        width: 100%;
+        max-width: 300px;
+        height: 430px;
+        margin: auto;
+    }
+
+    .carousel-item {
+        padding: 0 20px;
+    }
+
+    .cards-row {
+        justify-content: center;
+    }
+
+    .cards-row .card-wrapper {
+        display: none;
+    }
+
+    .cards-row .card-wrapper:first-child {
+        display: block;
+    }
+
+    .carousel-control-prev {
+        left: 0;
+    }
+
+    .carousel-control-next {
+        right: 0;
+    }
+
+}
+
+/* ==========================
+   Agendamento
+========================== */
+.section-agendamento .row{
+    min-height: 320px;
+}
+
+.img-agendamento{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.conteudo-agendamento{
+    background: var(--color-background-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 60px;
+}
+
+
+.texto-agendamento{
+    max-width: 560px;
+}
+
+.texto-agendamento h2{
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--color-text-white);
+    margin-bottom: 18px;
+}
+
+.texto-agendamento p{
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,.85);
+
+    margin-bottom: 28px;
+}
+
+/* botão agendamento */
+.btn-banner{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--color-base-800);
+    color: var(--color-text-white);
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.btn-banner i{
+    color: var(--color-base-400);
+}
+
+.btn-banner:hover{
+    background: var(--color-base-801);
+}
+
+/* mobile agen. */
+@media(max-width:991px){
+
+    .conteudo-agendamento{
+        padding: 45px 30px;
+        text-align: center;
+    }
+
+    .texto-agendamento{
+        max-width: 100%;
+    }
+
+    .texto-agendamento h2{
+        font-size: 30px;
+    }
+
+    .texto-agendamento p{
+        font-size: 15px;
+    }
+
+    .img-agendamento{
+        min-height: 260px;
+    }
+}
+/* ============
+    faq
+=========== */
+.faq-section{
+    background: #E8DDD0;
+}
+
+.faq-subtitulo{
+    display: block;
+    font-size: 14px;
+    color: #5A4A42;
+    margin-bottom: 8px;
+}
+
+.faq-titulo{
+     font-size: 36px;
+    color: #5A4A42;
+    margin-bottom: 0;
+}
+
+.accordion{
+    --bs-accordion-border-width: 0;
+    --bs-accordion-bg: #F7F3EE;
+    --bs-accordion-border-radius: 16px;
+}
+
+.accordion-item{
+    margin-bottom: 18px;
+    border-radius: 16px !important;
+    overflow: hidden;
+}
+
+.accordion-button{
+    background: #F7F3EE;
+    padding: 1.3rem 1.5rem;
+    color: #5A4A42;
+    font-size: 18px;
+  
+}
+
+.accordion-button:not(.collapsed){
+    background: #F7F3EE;
+    color: #5A4A42;
+}
+
+.accordion-button::after{
+    filter: sepia(1) saturate(4);
+}
+
+.accordion-body{
+    color: #6B5B52;
+}
+
+/* FOOTER CLINICAAAA */
+  .footer-clinica {
+      background: var(--color-base-800);
+      padding: 90px 0;
+  }
+
+  .footer-titulo {
+      color: var(--color-base-500);
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }
+
+  .footer-lista {
+      color: var(--color-text-white);
+      padding-left: 18px;
+  }
+
+  .footer-lista li {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      list-style: none;
+  }
+
+  .footer-links {
+      list-style: none;
+      padding-left: 0;
+  }
+
+  .footer-links a {
+      color: var(--color-text-white);
+      text-decoration: none;
+      transition: .3s;
+  }
+
+  .footer-links a:hover {
+      color: var(--color-base-500);
+  }
+
+  .footer-redes a {
+      color: var(--color-text-white);
+      font-size: 38px;
+      transition: .3s;
+  }
+
+  .footer-redes a:hover {
+      color: var(--color-base-500);
+  }
+
+  .footer-divisor {
+      margin: 70px 0;
+      border-color: rgba(255, 255, 255, .25);
+  }
+
+  .footer-logo {
+      max-width: 110px;
+  }
+
+  .footer-texto {
+      color: var(--color-text-white);
+      line-height: 1.7;
+  }
+/* configurações para versão mobile */
+  @media (max-width: 768px) {
+
+      .footer-clinica {
+          text-align: center;
+      }
+
+      .footer-lista {
+          list-style: none;
+          padding-left: 0;
+      }
+
+      .footer-titulo {
+          margin-bottom: 15px;
+      }
+
+      .footer-divisor {
+          margin: 40px 0;
+      }
+
+      .footer-logo {
+          max-width: 90px;
+      }
+  }
+
+
+
+
+/* animação da topbar para mobile */
+@keyframes topbarScroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}

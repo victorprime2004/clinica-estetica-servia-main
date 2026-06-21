@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- menu -->
+    <header id="header">
+        <div class="container-header">
+            <!-- logo -->
+            <div class="logo">
+                <img src="../assets/images/logo-clínica.png" alt="Logo com íniciais 'E' e 'B'(estética Brasileira)">
+            </div>
+
+            <nav class="menu-desktop">
+                <!-- links desktop -->
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <i class="fa-solid fa-house"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="clinica.html">
+                            <i class="fa-solid fa-spa"></i>
+                            Clínica
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="servicos.html">
+                            <i class="fa-solid fa-sun"></i>
+                            Serviços
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="agendamento.html">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Agendamento
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="search-area">
+
+                <div class="search-box">
+                    <input type="text" placeholder="Pesquisar">
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <!-- bandeiras -->
+                <div class="flags">
+                    <img src="https://flagcdn.com/w40/br.png">
+                    <img src="https://flagcdn.com/w40/rs.png">
+                </div>
+
+            </div>
+
+            <!-- hamburguer -->
+            <div class="menu-toggle" id="openMenu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- menu mobile  -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <div class="close-btn" id="closeMenu">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <!-- links menu mobile -->
+        <ul>
+
+            <li>
+                <a href="../index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="clinica.html">
+                    <i class="fa-solid fa-spa"></i>
+                    Clínica
+                </a>
+            </li>
+
+            <li>
+                <a href="servicos.html">
+                    <i class="fa-solid fa-sun"></i>
+                    Serviços
+                </a>
+            </li>
+
+            <li>
+                <a href="agendamento.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Agendamento
+                </a>
+            </li>
+
+
+        </ul>
+        <div class="flags-mobile">
+
+            <img src="https://flagcdn.com/w40/br.png" alt="Português">
+            <img src="https://flagcdn.com/w40/rs.png" alt="Srpski">
+
+        </div>
+
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="banner">
+        <div class="banner-topbar">
+
+            <div class="banner-topbar-content">
+
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Knez Mihailova 45, Belgrado — Sérvia
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    +381 11 456 7890
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    contact@ebclinic.rs
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    Seg - Sab: 09:00 - 20:00
+                </span>
+
+            </div>
+
+        </div>
+        <div class="banner-content">
+            <h1>Sua pele merece um cuidado <br> <span id="span-gold-banner">extraordinário</span> </h1>
+            <p> Descubra <span id="span-gold-banner">tratamentos</span> delicados e modernos desenvolvidos para renovar
+                sua beleza </p>
+
+        </div>
+    </section>
+
+    <!-- section rosa Serviços -->
+    <section class="section-servicos py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">Serviços</h2>
+                    <p class="mb-0">Cuidados pensados para realçar sua beleza natural e elevar sua autoestima,
+                        transformando sua rotina em um momento de bem-estar e sofisticação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tratamentos  -->
+    <section class="tratamentos-section py-5">
+
+        <div class="container">
+
+            <!-- Cabeçalho -->
+            <div class="text-center mb-5">
+
+                <span class="subtitulo-tratamentos">
+                    Tratamentos
+                </span>
+
+                <h2 class="titulo-tratamentos">
+                    Tratamentos mais procurados na Estética Brasileira
+                </h2>
+
+            </div>
+
+            <!-- Filtros -->
+            <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
+
+                <button class="btn-filtro active" data-category="massagens">
+                    Massagens
+                </button>
+
+                <button class="btn-filtro" data-category="corporais">
+                    Tratamentos Corporais
+                </button>
+
+                <button class="btn-filtro" data-category="faciais">
+                    Tratamentos Faciais
+                </button>
+
+                <button class="btn-filtro" data-category="depilacoes">
+                    Depilações
+                </button>
+
+            </div>
+
+            <!-- Carousel -->
+            <div id="carouselTratamentos" class="carousel slide" data-bs-ride="false">
+
+                <div class="carousel-inner" id="carousel-content">
+                </div>
+
+                <!-- Setas -->
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTratamentos"
+                    data-bs-slide="prev">
+
+                    <!-- seta da esqiuerda -->
+                    <span class="seta-carousel">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTratamentos"
+                    data-bs-slide="next">
+
+                    <!-- seta direita do carrosel -->
+                    <span class="seta-carousel">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section Agendamento -->
+    <section class="section-agendamento">
+
+        <div class="container-fluid p-0">
+
+            <div class="row g-0">
+
+                <!-- Imagem -->
+                <div class="col-lg-5 col-12">
+
+                    <img src="../assets/images/img-section-agendamento.jpg" alt="Mulher recebendo massagem"
+                        class="img-agendamento">
+                </div>
+
+                <!-- Conteúdo -->
+                <div class="col-lg-7 col-12 conteudo-agendamento">
+                    <div class="texto-agendamento">
+
+                        <h2> Agende agora o seu momento com a Estética Brasileira! </h2>
+
+                        <p> Reserve seu horário e venha viver uma experiência de cuidado,
+                            conforto e bem-estar em um ambiente pensado para você. </p>
+
+                        <a href="#" class="btn-banner">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            Agendar
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section FAQ rosa -->
+    <section class="section-servicos py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">FAQ</h2>
+                    <p class="mb-0">EEncontre respostas para as suas dúvidas. Oferecemos um atendimento seguro,
+                        profissional e personalizado para você se sentir confiante em cada etapa. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- faq duvidas frequentes -->
+    <section class="faq-section py-5">
+
+        <div class="container">
+            <div class="text-center mb-5">
+
+                <span class="faq-subtitulo">FAQ</span>
+                <h2 class="faq-titulo">Dúvidas Frequentes</h2>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqLeft">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    Quais tratamentos oferecemos?
+                                </button>
+
+                            </h2>
+
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    Trabalhamos com massagens, drenagem,
+                                    limpeza de pele, tratamentos corporais,
+                                    faciais e depilações.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    Como agendar um tratamento?
+                                </button>
+
+                            </h2>
+
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    Você pode agendar pelo WhatsApp ou
+                                    diretamente pelo formulário do site.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    Quanto tempo dura uma sessão?
+                                </button>
+
+                            </h2>
+
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    Em média entre 50 e 90 minutos,
+                                    dependendo do procedimento.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqRight">
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
+                                    É necessário avaliação prévia?
+                                </button>
+
+                            </h2>
+
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+
+                                <div class="accordion-body">
+                                    Alguns tratamentos exigem uma avaliação
+                                    inicial para definir o protocolo ideal.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq5">
+                                    Existem pacotes promocionais?
+                                </button>
+
+                            </h2>
+
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    Sim. Possuímos pacotes personalizados
+                                    com valores especiais.
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq6">
+                                    Posso remarcar meu horário?
+                                </button>
+
+                            </h2>
+
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    Sim, mediante aviso prévio conforme nossa política.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Footer -->
+    <footer class="footer-clinica py-5">
+        <div class="container">
+
+            <div class="row gy-5 text-center justify-content-center px-md-4">
+                <div class="row gy-5 text-center justify-content-between px-lg-5"></div>
+
+                <!-- COLUNA UM -->
+                <div class="col-12 col-md-3">
+
+                    <h4 class="footer-titulo">
+                        LOCALIZAÇÃO<br>CLÍNICA
+                    </h4>
+
+                    <ul class="footer-lista">
+
+                        <li>Kralja Petra 42, Stari Grad11000</li>
+                        <li>Beograd, SERBIA</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- COLUNA II -->
+                <div class="col-12 col-md-3">
+
+                    <h4 class="footer-titulo">
+                        HORÁRIOS<br>DISPONÍVEIS
+                    </h4>
+
+                    <ul class="footer-lista">
+
+                        <li>Segunda a Sexta - 09h às 19h</li>
+                        <li>Sábado: 08h às 14h</li>
+                        <li>Domingo: Fechado</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- COLUNA III -->
+                <div class="col-12 col-md-3">
+
+                    <h4 class="footer-titulo">
+                        ESTÉTICA<br>BRASILEIRA
+                    </h4>
+
+                    <ul class="footer-lista footer-links">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/clinica.html">Clínica</a></li>
+                        <li><a href="pages/servicos.html">Serviços</a></li>
+                        <li><a href="pages/agendamento.html">Agendamento</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- COLUNA IV -->
+                <div class="col-12 col-md-3">
+
+                    <h4 class="footer-titulo">
+                        REDES SOCIAIS
+                    </h4>
+
+                    <div class="footer-redes d-flex justify-content-center gap-4 mt-4">
+
+                        <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+
+                        <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <hr class="footer-divisor">
+
+            <!-- logo + mini história -->
+            <div class="row align-items-center justify-content-center g-3">
+                <div class="col-12 col-md-2 text-center text-md-end">
+                    <img src="../assets/images/logo-clínica.png" alt="Logo Clínica" class="footer-logo">
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <p class="footer-texto mb-0"> Na Clínica Estética Brasileira, acreditamos que autoestima e bem-estar
+                        caminham juntos. Com atendimento personalizado e tecnologia avançada,
+                        oferecemos tratamentos estéticos modernos para realçar a beleza natural,
+                        promover confiança e proporcionar uma experiência de cuidado única para
+                        cada cliente. </p>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

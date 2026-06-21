@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- menu -->
+    <header id="header">
+        <div class="container-header">
+            <!-- logo -->
+            <div class="logo">
+                <img src="assets/images/logo-clínica.png" alt="Logo com íniciais 'E' e 'B'(estética Brasileira)">
+            </div>
+
+            <nav class="menu-desktop">
+                <!-- links desktop -->
+                <ul>
+                    <li>
+                        <a href="index.html"> <i class="fa-solid fa-house"></i> Home </a>
+                    </li>
+
+                    <li>
+                        <a href="clinica.html">
+                            <i class="fa-solid fa-spa"></i>
+                            Clínica
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/servicos.html">
+                            <i class="fa-solid fa-sun"></i>
+                            Serviços
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="agendamento.html">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Agendamento
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="search-area">
+
+                <div class="search-box">
+                    <input type="text" placeholder="Pesquisar">
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <!-- bandeiras -->
+                <div class="flags">
+                    <img src="https://flagcdn.com/w40/br.png">
+                    <img src="https://flagcdn.com/w40/rs.png">
+                </div>
+
+            </div>
+
+            <!-- hamburguer -->
+            <div class="menu-toggle" id="openMenu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- menu mobile  -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <div class="close-btn" id="closeMenu">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <!-- links menu mobile -->
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/clinica.html">
+                    <i class="fa-solid fa-spa"></i>
+                    Clínica
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/servicos.html">
+                    <i class="fa-solid fa-sun"></i>
+                    Serviços
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/agendamento.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Agendamento
+                </a>
+            </li>
+
+
+        </ul>
+        <div class="flags-mobile">
+
+            <img src="https://flagcdn.com/w40/br.png" alt="Português">
+            <img src="https://flagcdn.com/w40/rs.png" alt="Srpski">
+
+        </div>
+
+    </div>
+
+    <!-- overlay - permite a tela ficar escura para dar foco ao menu aberto -->
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- Banner e titulo com botão de agendamento -->
+    <section class="banner">
+        <div class="banner-topbar">
+
+            <div class="banner-topbar-content">
+
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Knez Mihailova 45, Belgrado — Sérvia
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    +381 11 456 7890
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    contact@ebclinic.rs
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    Seg - Sab: 09:00 - 20:00
+                </span>
+
+            </div>
+
+        </div>
+        <div class="banner-content">
+            <h1> Realce sua beleza com<br> elegância e cuidado </h1>
+
+            <p> Na <span id="span-gold-banner">Estética Brasileira</span>, cada detalhe foi pensado para proporcionar
+                uma experiência sofisticada, acolhedora e focada no seu bem-estar. </p>
+
+            <a href="#" class="btn-banner"> <i class="fa-solid fa-calendar-check"></i> Agendar </a>
+        </div>
+    </section>
+
+    <section class="section-introduction">
+        <div class="container">
+            <div class="row justify-content-center g-4">
+                <div class="col-md-3 col-12">
+                    <div class="introduction-content">
+                        <i class="fa-solid fa-spa"></i>
+                        <h3>Serviços</h3>
+                        <p> Cuido da sua beleza com atenção e qualidade, oferecendo experiências que valorizam seu
+                            bem-estar. </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-12">
+                    <div class="introduction-content">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                        <h3>Tratamento</h3>
+                        <p> Cuido da sua beleza com atenção e qualidade, oferecendo experiências que valorizam seu
+                            bem-estar.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-12">
+
+                    <div class="introduction-content">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <h3>Clínica</h3>
+                        <p> Cuido da sua beleza com atenção e qualidade, oferecendo experiências que valorizam seu
+                            bem-estar. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-beauty">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4 col-12 beauty-content">
+                    <img src="assets/images/img-beauty.jpg" alt="mulher fazendo tratamento facial">
+                </div>
+                <div class="col-md-4 col-12 beauty-content">
+                    <h2>Beauty</h2>
+                    <h3>Bem-estar e cuidado</h3>
+                    <p>Cuidar de si mesma vai além da estética, é um ato de amor próprio. Aqui, cada detalhe é pensado
+                        para proporcionar uma experiência única, com procedimentos modernos, seguros e personalizados
+                        para realçar o que você tem de melhor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel de imagens teste-->
+    <section class="carroussel-section">
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/img-mulher-clinica.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/img-beauty.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/img-section-agendamento.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+
+    <!-- Cards destaque -->
+    <section class="cards-destaque">
+
+        <div class="container">
+
+            <!-- Título -->
+            <div class="text-center mb-5">
+
+                <h2>Serviços em Destaque</h2>
+
+                <h3 class="subtitulo-destaque">
+                    Tratamentos exclusivos desenvolvidos para valorizar sua beleza
+                </h3>
+
+            </div>
+
+            <!-- MOBILE -->
+            <div id="carouselServicos" class="carousel slide d-md-none" data-bs-touch="true" data-bs-ride="false">
+
+                <div class="carousel-inner">
+
+                    <!-- CARD 1 -->
+                    <div class="carousel-item active">
+
+                        <div class="d-flex justify-content-center">
+
+                            <div class="card">
+
+                                <img src="assets/images/img1-card-servicosDestaque.jpg"
+                                    class="card-img-top img-card-servico" alt="Mulher realizando procedimento estético">
+
+                                <div class="card-body d-flex flex-column">
+
+                                    <h5 class="card-title">Limpeza de Pele</h5>
+
+                                    <p class="card-text">
+                                        Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+
+                                        <span class="preco-servico">59.000RS</span>
+
+                                        <a href="#" class="btn btn-dark rounded-pill">
+                                            Ver Mais
+                                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="carousel-item">
+
+                        <div class="d-flex justify-content-center">
+
+                            <div class="card">
+
+                                <img src="assets/images/img2-card-servicoDestaque.jpg"
+                                    class="card-img-top img-card-servico" alt="Mulher realizando procedimento estético">
+
+                                <div class="card-body d-flex flex-column">
+
+                                    <h5 class="card-title">Hidratação Facial</h5>
+
+                                    <p class="card-text">
+                                        Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+
+                                        <span class="preco-servico">59.000RS</span>
+
+                                        <a href="#" class="btn btn-dark rounded-pill">
+                                            Ver Mais
+                                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="carousel-item">
+
+                        <div class="d-flex justify-content-center">
+
+                            <div class="card">
+
+                                <img src="assets/images/img3-card-servicoDestaque.jpg"
+                                    class="card-img-top img-card-servico" alt="Mulher realizando procedimento estético">
+
+                                <div class="card-body d-flex flex-column">
+
+                                    <h5 class="card-title">Massagem Relaxante</h5>
+
+                                    <p class="card-text">
+                                        Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+
+                                        <span class="preco-servico">59.000RS</span>
+
+                                        <a href="#" class="btn btn-dark rounded-pill">
+                                            Ver Mais
+                                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Indicadores -->
+                <div class="carousel-indicators position-relative mt-4">
+
+                    <button type="button" data-bs-target="#carouselServicos" data-bs-slide-to="0" class="active">
+                    </button>
+
+                    <button type="button" data-bs-target="#carouselServicos" data-bs-slide-to="1">
+                    </button>
+
+                    <button type="button" data-bs-target="#carouselServicos" data-bs-slide-to="2">
+                    </button>
+
+                </div>
+
+                <!-- Seta anterior -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicos"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"></span>
+
+                </button>
+
+                <!-- Próxima seta -->
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselServicos"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+
+                </button>
+
+            </div>
+
+            <!-- DESKTOP -->
+            <div class="row justify-content-center g-4 d-none d-md-flex">
+
+                <div class="col-md-3">
+
+                    <div class="card h-100">
+
+                        <img src="assets/images/img1-card-servicosDestaque.jpg" class="card-img-top img-card-servico"
+                            alt="Mulher realizando procedimento estético">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h5 class="card-title">Limpeza de Pele</h5>
+
+                            <p class="card-text">
+                                Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+
+                                <span class="preco-servico">59.000RS</span>
+
+                                <a href="#" class="btn btn-dark rounded-pill">
+                                    Ver Mais
+                                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="card h-100">
+
+                        <img src="assets/images/img2-card-servicoDestaque.jpg" class="card-img-top img-card-servico"
+                            alt="Mulher realizando procedimento estético">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h5 class="card-title">Hidratação Facial</h5>
+
+                            <p class="card-text">
+                                Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+
+                                <span class="preco-servico">59.000RS</span>
+
+                                <a href="#" class="btn btn-dark rounded-pill">
+                                    Ver Mais
+                                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="card h-100">
+
+                        <img src="assets/images/img3-card-servicoDestaque.jpg" class="card-img-top img-card-servico"
+                            alt="Mulher realizando procedimento estético">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h5 class="card-title">Massagem Relaxante</h5>
+
+                            <p class="card-text">
+                                Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+
+                                <span class="preco-servico">59.000RS</span>
+
+                                <a href="#" class="btn btn-dark rounded-pill">
+                                    Ver Mais
+                                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Botão -->
+            <div class="text-center mt-5">
+
+                <a href="#" class="btn-banner">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Agendar
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- avaliações seção -->
+    <section class="section-avaliacoes">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2>Sua satisfação é o nosso maior prêmio</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis molestie, dictum est a, mattis tellus.
+                </p>
+
+            </div>
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <div class="container-avaliacoes">
+                        <div class="row row-avaliacoes g-4">
+
+                            <div class="col-md-4">
+                                <div class="card-avaliacao">
+
+                                    <img src="assets/images/persona-avaliacao.jpg" alt="Cliente">
+
+                                    <h3>Amelie Alvez</h3>
+
+                                    <div class="estrelas">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <p>
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card-avaliacao">
+
+                                    <img src="assets/images/persona2-avaliacao.jpg" alt="Cliente">
+
+                                    <h3>Esther Howard</h3>
+
+                                    <div class="estrelas">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <p>
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card-avaliacao">
+
+                                    <img src="assets/images/persona3-avaliacao.jpg" alt="Cliente">
+
+                                    <h3>Aleksandar</h3>
+
+                                    <div class="estrelas">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <p>
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section-contato">
+        <div class="container">
+            <div class="row align-items-center justify-content-center g-3">
+
+                <div class="col-md-4">
+
+                    <div class="contato-info">
+
+                        <h2>
+                            Entre em <span>Contato</span>
+                        </h2>
+
+                        <p class="descricao">
+                            Estamos prontos para receber você!
+                        </p>
+
+                        <ul class="lista-contato">
+
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Kralja Petra 42, Stari Grad, Belgrado
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                +381 11 456 7890
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                contact@ebclinic.rs
+                            </li>
+
+                        </ul>
+
+                        <div class="horarios">
+
+                            <h3>Horário de Funcionamento</h3>
+
+                            <p>Segunda à Sexta • 09h às 19h</p>
+                            <p>Sábado • 08h às 14h</p>
+                            <p>Domingo • Fechado</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- MAPA -->
+
+                <div class="col-md-6">
+
+                    <div class="mapa-container">
+
+                        <iframe src="https://www.google.com/maps?q=Belgrade&output=embed" allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-clinica py-5">
+        <div class="container">
+
+            <div class="row gy-5 text-center justify-content-center px-md-4">
+                <div class="row gy-5 text-center justify-content-between px-lg-5"></div>
+
+                <!-- COLUNA UM -->
+                <div class="col-12 col-md-3">
+
+                    <h4 class="footer-titulo">
+                        LOCALIZAÇÃO<br>CLÍNICA
+                    </h4>
+
+                    <ul class="footer-lista">
+
+                        <li>Kralja Petra 42, Stari Grad11000</li>
+                        <li>Beograd, SERBIA</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- COLUNA II -->
+                <div class="col-12 col-md-3">
+
+                    <h4 class="footer-titulo">
+                        HORÁRIOS<br>DISPONÍVEIS
+                    </h4>
+
+                    <ul class="footer-lista">
+
+                        <li>Segunda a Sexta - 09h às 19h</li>
+                        <li>Sábado: 08h às 14h</li>
+                        <li>Domingo: Fechado</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- COLUNA III -->
+                <div class="col-12 col-md-3">
+
+                    <h4 class="footer-titulo">
+                        ESTÉTICA<br>BRASILEIRA
+                    </h4>
+
+                    <ul class="footer-lista footer-links">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/clinica.html">Clínica</a></li>
+                        <li><a href="pages/servicos.html">Serviços</a></li>
+                        <li><a href="pages/agendamento.html">Agendamento</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- COLUNA IV -->
+                <div class="col-12 col-md-3">
+
+                    <h4 class="footer-titulo">
+                        REDES SOCIAIS
+                    </h4>
+
+                    <div class="footer-redes d-flex justify-content-center gap-4 mt-4">
+
+                        <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+
+                        <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <hr class="footer-divisor">
+
+            <!-- logo + mini história -->
+            <div class="row align-items-center justify-content-center g-3">
+                <div class="col-12 col-md-2 text-center text-md-end">
+                    <img src="assets/images/logo-clínica.png" alt="Logo Clínica" class="footer-logo">
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <p class="footer-texto mb-0"> Na Clínica Estética Brasileira, acreditamos que autoestima e bem-estar
+                        caminham juntos. Com atendimento personalizado e tecnologia avançada,
+                        oferecemos tratamentos estéticos modernos para realçar a beleza natural,
+                        promover confiança e proporcionar uma experiência de cuidado única para
+                        cada cliente. </p>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

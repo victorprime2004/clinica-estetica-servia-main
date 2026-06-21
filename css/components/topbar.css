@@ -1,0 +1,64 @@
+/* Configuração do TopBar */
+
+.banner-topbar {
+  width:    100%;
+  position: absolute;
+  top:      105px;
+  left:     0;
+  z-index:  3;
+}
+
+.banner-topbar-content {
+  max-width:       1400px;
+  margin:          auto;
+  padding:         0 var(--space-6);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             var(--space-3);
+  flex-wrap:       wrap;
+}
+
+.banner-topbar-content span {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-2);
+  font-size:   14px;
+  font-weight: var(--font-weight-medium);
+  color:       var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.banner-topbar-content i {
+  color:     var(--color-brand-medium);
+  font-size: var(--text-size-small);
+}
+
+.separator {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+/* Animação scroll no mobile */
+@media (max-width: 950px) {
+
+  .banner-topbar {
+    overflow: hidden;
+  }
+
+  .banner-topbar-content {
+    width:     max-content;
+    flex-wrap: nowrap;
+    padding:   0 25px;
+    animation: topbarScroll 22s linear infinite;
+  }
+
+  .banner-topbar-content span {
+    font-size: var(--text-size-small);
+  }
+}
+
+/* Keyframe da animação — pertence aqui, não no footer */
+@keyframes topbarScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

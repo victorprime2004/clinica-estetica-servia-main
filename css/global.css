@@ -1,0 +1,57 @@
+/* ESTILOS BASE PARA TODO O SITE */
+
+/*Tudo o que se repetir em páginas deve estar aqui: Classes e IDs*/
+
+/* Configurações Base do Corpo do Site */
+body {
+  font-family:      var(--font-family-body);       /* IBM Plex Serif */
+  font-size:        var(--text-size-body);         /* Equivalente ao h4 (16px) */
+  font-weight:      var(--font-weight-regular);
+  line-height:      var(--text-leading-body);      /* 1.7 */
+  color:            var(--color-text-primary);   /* Texto Marrom */
+  background-color: var(--color-bg-primary);     /* Off-white */
+}
+
+/* Configuração Padrão de Títulos */
+h1,h2,h3{
+    font-family: var(--font-family-title);          /* Julius Sans One */
+    font-weight: var(--font-weight-regular);      /* 1.2 */
+    line-height: var(--text-leading-title);
+    color: var(--color-text-dark);                /* Texto Escuro */
+}
+h4, h5, h6 {
+  font-family: var(--font-family-body);          
+  line-height: var(--text-leading-title);         
+  font-weight: var(--font-weight-medium);
+  color:       var(--color-text-dark);        
+}
+
+/* Estrutura de Layout */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: var(--spacing-pad-md); 
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: var(--spacing-pad-sm);        /* Reduz o recuo em telas menores */
+  }
+}
+
+/* --- Títulos de Impacto (Display) --- */
+.text-t1 { font-size: var(--text-size-title1); font-family: var(--font-family-title); } /* 96px */
+.text-t2 { font-size: var(--text-size-title2); font-family: var(--font-family-title); } /* 64px */
+.text-t3 { font-size: var(--text-size-title3); font-family: var(--font-family-title); } /* 48px */
+.text-t4 { font-size: var(--text-size-title4); font-family: var(--font-family-title); } /* 36px */
+
+/* --- Títulos Estruturais (Headings) --- */
+.text-h1 { font-size: var(--text-size-section-title); }   /* 32px */
+.text-h2 { font-size: var(--text-size-section-subtitle); }/* 24px */
+.text-h3 { font-size: var(--text-size-card-title); }      /* 18px */
+
+/* --- Textos de Corpo e Apoio --- */
+.text-body    { font-size: var(--text-size-body); }       /* 16px */
+.text-small   { font-size: var(--text-size-small); }      /* 13px */
+.text-caption { font-size: var(--text-size-caption); }    /* 10px */

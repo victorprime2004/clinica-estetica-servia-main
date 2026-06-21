@@ -1,0 +1,148 @@
+/* Todos os botões do site são centralizado aqui. NUNCA declarar botão em arquivo de página */
+/* Toda variante de botão herda daqui */
+
+.btn-base {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             var(--space-2);              /* 8px */
+  padding:         var(--space-2) var(--space-5); /* 8px 32px */
+  border-radius:   var(--radius-pill);
+  font-family:     var(--font-family-interact);  /* Inter */
+  font-size:       var(--text-size-body);        /* 16px */
+  font-weight:     var(--font-weight-medium);    /* 500 */
+  text-decoration: none;
+  cursor:          pointer;
+  border:          none;
+  transition:      background-color var(--ease-navigation),
+                   color            var(--ease-navigation),
+                   border-color     var(--ease-navigation);
+}
+
+
+/* Agendar, CTAs de destaque
+   Fundo verde petróleo, texto branco, ícone dourado
+   Uso: banner, seção agendamento */
+
+.btn-banner {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             var(--space-2);
+  padding:         14px 28px;
+  background:      var(--color-action);          
+  color:           var(--color-text-white);
+  text-decoration: none;
+  border-radius:   var(--radius-pill);
+  font-family:     var(--font-family-interact);
+  font-size:       var(--text-size-body);
+  font-weight:     var(--font-weight-medium);
+  border:          none;
+  cursor:          pointer;
+  transition:      background-color var(--ease-navigation);
+}
+
+/* Ícone interno dourado */
+.btn-banner i {
+  color: var(--color-brand-main);
+}
+
+.btn-banner:hover {
+  background: var(--color-action-hover);
+  color:      var(--color-text-white);           
+}
+
+
+/* Ver Mais nos cards de serviço
+   Substitui o .btn.btn-dark do Bootstrap
+   Uso: cards de destaque na home e serviços */
+
+.btn-card {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             var(--space-2);
+  padding:         var(--space-2) var(--space-3); /* 8px 16px */
+  background:      var(--color-action);
+  color:           var(--color-text-white);
+  text-decoration: none;
+  border-radius:   var(--radius-pill);
+  font-family:     var(--font-family-interact);
+  font-size:       var(--text-size-small);        /* 13px */
+  font-weight:     var(--font-weight-medium);
+  border:          none;
+  cursor:          pointer;
+  white-space:     nowrap;                        /* evita quebra de linha no botão */
+  transition:      background-color var(--ease-navigation);
+}
+
+.btn-card:hover {
+  background: var(--color-action-hover);
+  color:      var(--color-text-white);
+}
+
+
+/* BTN FILTRO — Filtros de categoria na página de serviços
+   Uso: página serviços */
+
+.btn-filtro {
+  display:       inline-flex;
+  align-items:   center;
+  padding:       12px 24px;
+  background:    var(--color-action);
+  color:         var(--color-text-white);
+  border:        none;
+  border-radius: var(--radius-lg);               
+  font-family:   var(--font-family-interact);
+  font-size:     var(--text-size-body);
+  font-weight:   var(--font-weight-regular);
+  cursor:        pointer;
+  transition:    background-color var(--ease-navigation);
+}
+
+.btn-filtro.active,
+.btn-filtro:hover {
+  background: var(--color-brand-secondary);      
+  color:      var(--color-text-dark);
+}
+
+
+/* BTN VER MAIS — Link para página do serviço
+   Uso: cards na página de serviços */
+
+.btn-vermais {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             var(--space-2);
+  padding:         var(--space-2) var(--space-3); /* 8px 16px */
+  background:      var(--color-action);
+  color:           var(--color-text-white);
+  text-decoration: none;
+  border-radius:   var(--radius-lg);
+  font-family:     var(--font-family-interact);
+  font-size:       var(--text-size-small);        /* 13px */
+  font-weight:     var(--font-weight-medium);
+  transition:      background-color var(--ease-navigation),
+                   color            var(--ease-navigation);
+}
+
+.btn-vermais:hover {
+  background: var(--color-action-hover);
+  color:      var(--color-text-white);
+}
+
+
+/* RESPONSIVO — Ajustes mobile */
+
+@media (max-width: 768px) {
+
+  /* Banner button menor no mobile */
+  .btn-banner {
+    padding:   12px 22px;
+    font-size: var(--text-size-small);
+  }
+
+  /* Filtros ocupam largura total no mobile */
+  .btn-filtro {
+    width:           100%;
+    justify-content: center;
+  }
+}

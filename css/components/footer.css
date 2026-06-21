@@ -1,0 +1,97 @@
+/*Configuração do Footer*/
+.footer-clinica {
+  background:  var(--color-bg-dark);     
+  padding:     var(--space-11) 0;          /* 90px vertical, 0 horizontal */
+  color:       var(--color-text-white);
+}
+
+/* Título de cada coluna */
+.footer-titulo {
+  font-family:   var(--font-family-body);
+  font-size:     var(--text-size-card-title);       /* 18px */
+  font-weight:   var(--font-weight-regular);      /* 400 */
+  color:         var(--color-brand-secondary);    /* Bege dourado */
+  margin-bottom: var(--space-4);                    /* 24px */
+}
+
+/* Lista de informações (endereço, horários) */
+.footer-lista {
+  list-style:   none;
+  padding-left: 0;
+  color:        var(--color-text-white);
+}
+
+.footer-lista li {
+  margin-bottom: var(--space-3);
+  line-height:   var(--text-leading-body);
+}
+
+/* Links de navegação */
+.footer-links {
+  list-style:   none;
+  padding-left: 0;
+}
+
+.footer-links a {
+  color:           var(--color-text-white);
+  text-decoration: none;
+  transition:      color var(--ease-navigation);
+}
+
+.footer-links a:hover {
+  color: var(--color-brand-secondary);
+}
+
+/* Ícones de redes sociais */
+.footer-redes a {
+  color:       var(--color-text-white);
+  font-size:   38px;                   
+  transition:  color var(--ease-navigation);
+}
+
+.footer-redes a:hover {
+  color: var(--color-brand-secondary);
+}
+
+/* Linha divisória horizontal */
+.footer-divisor {
+  margin:     70px 0;
+  border:     none;
+  border-top: 1px solid var(--color-border-divider-dark); /* rgba(255,255,255,.25) */
+}
+
+/* Logo */
+.footer-logo {
+  max-width: 110px;
+}
+
+/* Texto de copyright */
+.footer-texto {
+  color:       var(--color-text-soft);
+  line-height: var(--text-leading-body);
+  font-size:   var(--text-size-small);     /* 13px */
+}
+
+/* ============================================================
+   FOOTER — Mobile
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .footer-clinica {
+    text-align: center;
+  }
+
+  .footer-titulo {
+    margin-bottom: var(--space-2);         /* 8px */
+  }
+
+  .footer-divisor {
+    margin: var(--space-6) 0;              /* 40px */
+  }
+
+  .footer-logo {
+    max-width:     90px;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,39 @@
+/* Corrigir possíveis erros que podema presentar em alguns navegadores */
+/* Pode modificar alguns objetos da tela, sendo necessário aplicar modificações para corrigir */
+
+*, *::before, *::after{
+    box-sizing:  border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth; /*Deslizar até o link*/
+    -webkit-text-size-adjust: 100%; /*Impede oumento do tamanho da fonte*/
+}
+
+body{
+    -webkit-font-smoothing: antialiased;/*Evita fontes serrilhadas em aparel;hos mobile*/
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, textarea, select {
+  font: inherit; /*Força o uso das fontes selecionadas pora o site*/
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  color: inherit; /*Impede que o navegador pinte o link de azul*/
+  text-decoration: none;
+}

@@ -1,0 +1,537 @@
+/* ===============================================
+   HOME.CSS — Estilos exclusivos da página inicial
+   ================================================ */
+
+
+/* ==================
+   BANNER PRINCIPAL
+   ================== */
+
+.banner {
+  position:          relative;
+  width:             100%;
+  height:            600px;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(245, 238, 230, 0.35) 60%,
+      rgba(245, 238, 230, 0.05) 100%
+    ),
+    url(../assets/images/background-banner-home.png);
+  background-size:     cover;
+  background-position: center right;
+  display:             flex;
+  align-items:         center;
+  padding:             0 8%;
+}
+
+/* Conteúdo de texto do banner */
+.banner-content {
+  max-width:   600px;
+  padding-top: 140px;
+}
+
+.banner-content h1 {
+  font-size:     52px;
+  line-height:   var(--text-leading-title);
+  color:         var(--color-text-primary);
+  font-weight:   var(--font-weight-regular);
+  margin-bottom: var(--space-5);            /* 32px */
+}
+
+.banner-content p {
+  font-size:     var(--text-size-card-title); /* 18px */
+  line-height:   var(--text-leading-body);
+  color:         var(--color-text-muted);
+  margin-bottom: var(--space-7);              /* 48px */
+}
+
+/* Span dourado no título */
+#span-gold-banner {
+  color: var(--color-brand-main);
+}
+
+/* Responsivo banner */
+@media (max-width: 950px) {
+  .banner {
+    height:              auto;
+    padding:             140px 25px 90px;
+    background-position: 72%;
+  }
+
+  .banner-content h1 {
+    font-size: 36px;
+  }
+}
+
+
+/* ============================================================
+   SECTION INTRODUCTION — Cards de apresentação
+   ============================================================ */
+
+.section-introduction {
+  background: var(--color-accent-main);    /* Terracota */
+  padding:    var(--space-11) 0;           /* 90px */
+}
+
+/* Card individual */
+.introduction-content {
+  text-align:    center;
+  padding:       var(--space-6) var(--space-4); /* 40px 24px */
+  height:        100%;
+  border-radius: var(--radius-xl);              /* 24px */
+  background:    rgba(255, 255, 255, 0.08);
+}
+
+/* Ícone */
+.introduction-content i {
+  font-size:     38px;
+  color:         var(--color-accent-champagne);
+  margin-bottom: var(--space-4);               /* 24px */
+}
+
+/* Título do card */
+.introduction-content h3 {
+  color:         var(--color-text-white);
+  font-size:     var(--text-size-card-title);  /* 18px */
+  font-weight:   var(--font-weight-medium);
+  margin-bottom: var(--space-3);               /* 16px */
+}
+
+/* Texto do card */
+.introduction-content p {
+  color:       rgba(255, 255, 255, 0.88);
+  font-size:   var(--text-size-body);          /* 16px */
+  line-height: 1.8;
+  margin:      0;
+}
+
+/* Responsivo */
+@media (max-width: 950px) {
+  .section-introduction {
+    padding: 70px var(--space-4);
+  }
+
+  .section-introduction .container {
+    padding: 0;
+  }
+
+  .introduction-content {
+    padding: 35px 25px;
+  }
+
+  .introduction-content h3 {
+    font-size: 24px;
+  }
+
+  .introduction-content p {
+    font-size: var(--text-size-small);         /* 13px */
+  }
+}
+
+
+/* =================
+   SECTION BEAUTY
+   ================= */
+
+.section-beauty {
+  padding:            80px 0;
+  background-image:   url(//clinica-estetica-servia/assets/images/backgroung-banner-home.png);
+  background-size:    cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Imagem da seção */
+.section-beauty img {
+  width:         100%;
+  height:        340px;
+  object-fit:    cover;
+  border-radius: var(--radius-xl);             /* 24px */
+  box-shadow:    var(--shadow-lg);
+}
+
+/* Coluna de texto */
+.beauty-content {
+  display:        flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left:   50px;
+}
+
+/* Título */
+.section-beauty h2 {
+  font-size:     var(--text-size-title4);      /* 36px */
+  color:         var(--color-brand-main);
+  margin-bottom: var(--space-3);               /* 16px */
+  font-weight:   var(--font-weight-medium);
+}
+
+/* Subtítulo */
+.section-beauty h3 {
+  font-size:     var(--text-size-card-title);  /* 18px */
+  color:         var(--color-text-primary);
+  margin-bottom: var(--space-4);               /* 24px */
+}
+
+/* Parágrafo */
+.section-beauty p {
+  font-size:   var(--text-size-body);          /* 16px */
+  line-height: 2;
+  color:       var(--color-text-primary);
+  margin:      0;
+}
+
+/* Responsivo — bloco único, sem duplicata */
+@media (max-width: 950px) {
+  .section-beauty {
+    padding:               80px 25px;
+    background-attachment: scroll;
+  }
+
+  .section-beauty .row {
+    gap: 45px;
+  }
+
+  .beauty-content {
+    padding-left: 0;
+    text-align:   center;
+  }
+
+  .section-beauty img {
+    height: 320px;
+  }
+
+  .section-beauty h2 {
+    font-size: 32px;
+  }
+
+  .section-beauty h3 {
+    font-size: 19px;
+  }
+}
+
+
+/* ============================================================
+   CAROUSEL — Galeria de imagens
+   ============================================================ */
+
+.carousel-section {
+  padding:          80px 0;
+  background-color: var(--color-bg-tertiary);
+  display:          flex;
+  justify-content:  center;
+}
+
+#carouselExampleRide {
+  width:         100%;
+  max-width:     100%;
+  height:        400px;
+  border-radius: var(--radius-xl);
+  overflow:      hidden;
+  box-shadow:    var(--shadow-lg);
+}
+
+#carouselExampleRide .carousel-item img {
+  width:      100%;
+  height:     400px;
+  object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Responsivo */
+@media (max-width: 950px) {
+  .carousel-section {
+    padding: 60px 20px;
+  }
+
+  #carouselExampleRide {
+    height:        300px;
+    border-radius: var(--radius-lg);
+  }
+
+  #carouselExampleRide .carousel-item img {
+    height: 300px;
+  }
+}
+
+
+/* ============================================================
+   CARDS DESTAQUE — Serviços em destaque
+   ============================================================ */
+
+.cards-destaque {
+  background: var(--color-bg-dark);
+  padding:    80px 0;
+}
+
+/* Título da seção */
+.cards-destaque h2 {
+  font-size:     var(--text-size-title4);      /* 36px */
+  color:         var(--color-text-white);
+  margin-bottom: var(--space-2);               /* 8px */
+}
+
+.subtitulo-destaque {
+  font-size:   var(--text-size-card-title);    /* 18px */
+  color:       var(--color-text-white);
+  margin-bottom: 0;
+}
+
+/* Card de serviço */
+.cards-destaque .card {
+  width:         263px;
+  min-height:    369px;
+  background:    var(--color-bg-tertiary);
+  border:        none;
+  border-radius: var(--radius-lg);             /* 16px */
+  overflow:      hidden;
+  padding:       var(--space-2);               /* 8px */
+}
+
+/* Imagem do card */
+.img-card-servico {
+  width:         100%;
+  height:        170px;
+  object-fit:    cover;
+  border-radius: var(--radius-md);             /* 8px */
+}
+
+/* Corpo do card */
+.cards-destaque .card-body {
+  padding: 18px 10px 10px;
+}
+
+.cards-destaque .card-title {
+  font-size:     var(--text-size-card-title);  /* 18px */
+  color:         var(--color-text-primary);
+  margin-bottom: var(--space-2);               /* 8px */
+}
+
+.cards-destaque .card-text {
+  font-size:     14px;
+  line-height:   1.6;
+  color:         var(--color-text-primary);
+  margin-bottom: var(--space-4);               /* 24px */
+}
+
+/* Preço */
+.preco-servico {
+  font-size:   var(--text-size-card-title);    /* 18px */
+  font-weight: var(--font-weight-medium);
+  color:       var(--color-brand-dark);        /* Bronze */
+}
+
+/* Botão do card */
+.cards-destaque .btn-dark {
+  background: var(--color-action);
+  border:     none;
+  font-size:  var(--text-size-small);          /* 13px */
+  padding:    var(--space-2) var(--space-3);   /* 8px 16px */
+}
+
+.cards-destaque .btn-dark:hover {
+  background: var(--color-action-hover);
+}
+
+
+/* ============
+   AVALIAÇÕES
+   ============ */
+
+.section-avaliacoes {
+  padding:             100px 0;
+  background-color:    var(--color-bg-secondary);
+  background-image:    url("//clinica-estetica-servia/assets/images/background-avaliações.png");
+  background-repeat:   no-repeat;
+  background-position: center;
+  background-size:     cover;
+}
+
+/* Título */
+.section-avaliacoes h2 {
+  font-size:     var(--text-size-title4);      /* 36px */
+  color:         var(--color-text-primary);
+  margin-bottom: var(--space-3);               /* 16px */
+}
+
+/* Subtítulo centralizado */
+.section-avaliacoes > .container > .text-center p {
+  max-width: 700px;
+  margin:    auto;
+  color:     var(--color-text-primary);
+}
+
+/* Container do grupo de cards */
+.container-avaliacoes {
+  background:    var(--color-bg-tertiary);
+  border-radius: var(--radius-xl);
+  overflow:      hidden;
+}
+
+.row-avaliacoes {
+  background-color: var(--color-bg-tertiary);
+  padding:          var(--space-6);            /* 40px */
+  display:          flex;
+}
+
+/* Card individual de avaliação */
+.card-avaliacao {
+  background:    var(--color-text-white);
+  border-radius: 20px;
+  padding:       35px 25px;
+  text-align:    center;
+  box-shadow:    var(--shadow-md);
+  height:        100%;
+}
+
+/* Foto do avaliador */
+.card-avaliacao img {
+  width:         70px;
+  height:        70px;
+  border-radius: 50%;
+  object-fit:    cover;
+  margin-bottom: var(--space-3);               /* 16px */
+}
+
+/* Nome */
+.card-avaliacao h3 {
+  font-size:     var(--text-size-body);        /* 16px */
+  color:         var(--color-text-dark);
+  margin-bottom: var(--space-1);               /* 4px */
+}
+
+/* Estrelas */
+.estrelas {
+  margin-bottom: var(--space-3);               /* 16px */
+}
+
+.estrelas i {
+  color:     var(--color-brand-main);
+  font-size: 14px;
+  margin:    0 2px;
+}
+
+/* Texto da avaliação */
+.card-avaliacao p {
+  font-size:   var(--text-size-body);          /* 16px */
+  line-height: 1.8;
+  color:       var(--color-text-primary);
+  margin:      0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container-avaliacoes {
+    overflow-x: auto;
+  }
+
+  .row-avaliacoes {
+    flex-wrap: nowrap;
+  }
+}
+
+
+/* =================
+   SECTION CONTATO
+   ================= */
+
+.section-contato {
+  padding:    100px 0;
+  background: var(--color-bg-secondary);
+}
+
+/* Título */
+.contato-info h2 {
+  font-size:     var(--text-size-title4);      /* 36px */
+  color:         var(--color-text-primary);
+  margin-bottom: var(--space-5);               /* 32px */
+  line-height:   var(--text-leading-title);
+}
+
+/* Span dourado no título */
+.contato-info h2 span {
+  color: var(--color-accent-gold);
+}
+
+/* Descrição */
+.descricao {
+  font-size:     var(--text-size-body);        /* 16px */
+  line-height:   1.8;
+  color:         var(--color-text-primary);
+  margin-bottom: var(--space-4);               /* 24px */
+}
+
+/* Lista de contato */
+.lista-contato {
+  list-style:    none;
+  padding:       0;
+  margin-bottom: var(--space-7);               /* 48px */
+}
+
+.lista-contato li {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-3);               /* 16px */
+  margin-bottom: var(--space-3);               /* 16px */
+  color:         var(--color-text-primary);
+  font-size:     var(--text-size-body);
+}
+
+.lista-contato i {
+  color: var(--color-accent-gold);
+}
+
+/* Horários */
+.horarios h3 {
+  font-size:     var(--text-size-card-title);  /* 18px */
+  color:         var(--color-text-dark);
+  margin-bottom: var(--space-3);               /* 16px */
+}
+
+.horarios p {
+  margin-bottom: var(--space-2);               /* 8px */
+  color:         var(--color-text-primary);
+}
+
+/* Mapa */
+.mapa-container {
+  border-radius: var(--radius-xl);
+  overflow:      hidden;
+  box-shadow:    var(--shadow-md);
+}
+
+.mapa-container iframe {
+  width:   100%;
+  height:  450px;
+  border:  none;
+  display: block;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .section-contato {
+    padding: 80px 20px;
+  }
+
+  .contato-info {
+    text-align: center;
+  }
+
+  .lista-contato li {
+    justify-content: center;
+  }
+
+  .mapa-container iframe {
+    height: 320px;
+  }
+}

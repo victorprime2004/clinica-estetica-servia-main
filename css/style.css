@@ -1,0 +1,779 @@
+/* Coisas do site inteiro: */
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&family=Julius+Sans+One&family=Inter:wght@400;500&display=swap');
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+/* 1. Tokens */
+@import 'variables.css';
+
+/* 2. Reset e Global */
+@import 'reset.css';
+@import 'global.css';
+
+/* 3. Layout */
+
+
+/* 4. Componentes */
+@import 'components/header.css';
+@import 'components/footer.css';
+@import 'components/topbar.css';
+@import 'components/button.css';
+
+/* Páginas */
+@import 'pages/servicos.css';
+@import 'pages/home.css';
+
+/* ================= HERO ================= */
+
+
+/* ================= BANNER ================= */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    color: white;
+
+    background-image: url("../assets/images/banner1.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ================================== */
+
+.clinic-intro{
+    background: #c27664;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+
+/* ================= CLINICA INTRO ================= */
+.clinic-intro h2{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    font-family: "IBM Plex Serif", serif;
+}
+
+.clinic-intro p{
+    max-width: 720px;
+    margin: 0 auto;
+    color: #f7f7f7;
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 300;
+}
+/* ================================== */
+
+
+/* ================= SOBRE - PROFISSIONAL================= */
+.sobre-profissional{
+    background: #f6f2ed;
+}
+
+.foto-esquerda,
+.foto-direita{
+    width: 100%;
+    height: 850px;
+    object-fit: cover;
+    display: block;
+}
+
+.texto-direita,
+.texto-esquerda{
+    padding: 90px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 850px;
+}
+
+.texto-direita h2,
+.texto-esquerda h2{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: #4f4038;
+    margin-bottom: 45px;
+}
+
+.texto-direita p,
+.texto-esquerda p{
+    font-family: "IBM Plex Serif", serif;
+    font-size: 22px;
+    line-height: 2;
+    color: #5c5048;
+    margin-bottom: 22px;
+    text-align: justify;
+}
+/* ================================== */
+
+
+/* ================= GALERIA ================= */
+.galeria{
+    background: #f4ede4;
+    padding: 40px 0;
+}
+
+.imagem-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px; /* distância entre a imagem e a linha */
+}
+
+.imagem-clinica{
+    flex: 1;
+}
+
+.imagem-clinica img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.linha-vertical{
+    width: 1px;
+    height: 230px;
+    background: #b8b2a3;
+    margin-left: 40px;
+    flex-shrink: 0;
+}
+/* ================================== */
+
+
+/* ================= AGENDAMENTO ================= */
+.agendamento{
+    background: #b5a28d;
+}
+
+.img-spa{
+    width:100%;
+    height:600px;
+    object-fit:cover;
+    display:block;
+}
+
+.conteudo-agendamento{
+    height:600px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding-left:85px;
+    padding-right:120px;
+}
+
+.conteudo-agendamento h2{
+    font-family: "Cormorant Garamond", serif;
+    font-size:52px;
+    font-weight:400;
+    color:#f8f5ef;
+    line-height:1.12;
+    max-width:520px;
+    margin-bottom:38px;
+}
+
+.conteudo-agendamento p{
+    font-family:"Cormorant Garamond", serif;
+    font-size:22px;
+    font-weight:400;
+    color:#f3eee8;
+    line-height:1.35;
+    max-width:430px;
+    margin-bottom:45px;
+}
+
+.btn-agendar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: #223C42;
+    
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 400;
+
+    padding: 14px 38px;
+
+    border: none;
+    border-radius: 24px;
+
+    text-decoration: none;
+    transition: .3s ease;
+
+    color: var(--color-brand-main);
+}
+
+.btn-agendar:hover{
+    background: #2d4b52;
+    color: var(--color-brand-main);
+}
+/* ================================== */
+
+
+
+/* ================= BENEFÍCIOS(CARDS) ================= */
+.beneficios{
+    background:#BF725F;
+    padding:70px 0;
+}
+
+.linha{
+    width:90%;
+    height:1px;
+    background:#D2A06D;
+    margin:0 auto 45px;
+}
+
+.card-beneficio{
+
+    background:#ECE7DE;
+
+    width:100%;
+    max-width:250px;
+    min-height:330px;
+
+    margin:auto;
+
+    border-radius:14px;
+
+    padding:28px 22px;
+
+    text-align:center;
+
+    transition:.3s;
+}
+
+.card-beneficio:hover{
+    transform:translateY(-6px);
+}
+
+.card-beneficio h3{
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:2rem;
+    font-weight:400;
+
+    color:#5A4A42;
+
+    line-height:1.1;
+
+    margin-bottom:18px;
+}
+
+.card-beneficio p{
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:1.2rem;
+
+    color:#5A4A42;
+
+    line-height:1.3;
+
+    margin:0;
+}
+
+.linha:last-child{
+    margin-top:45px;
+    margin-bottom:0;
+}
+/* ================================== */
+
+
+/* ================= CLÍNICA ================= */
+.clinica{
+    background:#ECE8DF;
+    padding:90px 0;
+}
+
+.imagens{
+    position: relative;
+    width: 500px;
+    height: 420px;
+    margin: auto;
+}
+
+/* Imagem de trás */
+.img-fundo{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 280px;
+    height: 360px;
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Imagem da frente */
+.img-frente{
+    position: absolute;
+    top: 80px;
+    left: 120px;
+
+    width: 270px;
+    height: 300px;
+
+    object-fit: cover;
+    border-radius: 10px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+}
+
+.texto-clinica{
+
+    max-width:430px;
+
+    margin-left:40px;
+}
+
+.texto-clinica h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:3rem;
+
+    font-weight:400;
+
+    color:#5A4A42;
+
+    margin-bottom:28px;
+}
+
+.texto-clinica p{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:1.3rem;
+
+    color:#5A4A42;
+
+    line-height:1.35;
+
+    margin-bottom:15px;
+}
+/* ================================== */
+
+
+/* ================= FOOTER ================= */
+.footer-clinica{
+    background:#2A3E3F;
+    padding:95px 0 50px;
+}
+
+/* Container */
+.footer-clinica .container{
+    max-width:1400px;
+}
+
+/* Primeira linha */
+.footer-clinica .row:first-child{
+    padding:0 70px;
+}
+
+.footer-titulo{
+    color:#CFA35A;
+    font-size:20px;
+    font-weight:500;
+    line-height:1.15;
+    margin-bottom:42px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.footer-lista{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-lista li{
+    color:#FFF;
+    font-size:17px;
+    line-height:2.6;
+}
+
+.footer-links a{
+    color:#FFF;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#CFA35A;
+}
+
+.footer-redes{
+    margin-top:45px;
+}
+
+.footer-redes a{
+    color:#FFF;
+    font-size:40px;
+    transition:.3s;
+}
+
+.footer-redes a:hover{
+    color:#CFA35A;
+}
+
+/* Linha */
+
+.footer-divisor{
+    width:82%;
+    margin:90px auto 75px;
+    border:0;
+    border-top:1px solid rgba(255,255,255,.12);
+}
+
+/* Parte inferior */
+
+.footer-bottom{
+    width: 82%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.footer-logo{
+    width: 140px;
+    min-width: 140px;
+    max-width: 140px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+}
+
+.footer-texto{
+    max-width: 650px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 2;
+    margin: 0;
+}
+
+/* ================================== */
+
+
+/* ==========================================================
+RESPONSIVIDADE
+========================================================== */
+
+/* Notebook */
+@media (max-width:1200px){
+
+    .texto-direita,
+    .texto-esquerda{
+        padding:60px;
+    }
+
+    .texto-direita h2,
+    .texto-esquerda h2{
+        font-size:50px;
+    }
+
+    .texto-direita p,
+    .texto-esquerda p{
+        font-size:20px;
+    }
+
+    .conteudo-agendamento{
+        padding:60px;
+    }
+
+    .footer-bottom{
+        gap:40px;
+    }
+
+}
+
+
+/* Tablet */
+@media (max-width:991px){
+
+    .banner{
+        height:500px;
+        background-position:center;
+    }
+
+    .clinic-intro{
+        padding:60px 25px;
+    }
+
+    .clinic-intro h2{
+        font-size:28px;
+    }
+
+    .clinic-intro p{
+        font-size:18px;
+    }
+
+    .foto-esquerda,
+    .foto-direita{
+        height:420px;
+    }
+
+    .texto-direita,
+    .texto-esquerda{
+
+        height:auto;
+
+        padding:50px 35px;
+
+        text-align:center;
+    }
+
+    .texto-direita h2,
+    .texto-esquerda h2{
+        font-size:42px;
+    }
+
+    .texto-direita p,
+    .texto-esquerda p{
+
+        text-align:left;
+
+        font-size:18px;
+
+        line-height:1.8;
+    }
+
+    .imagem-wrapper{
+
+        flex-direction:column;
+
+        gap:30px;
+    }
+
+    .linha-vertical{
+        display:none;
+    }
+
+    .imagem-clinica img{
+        height:350px;
+    }
+
+    .beneficios{
+        padding:60px 0;
+    }
+
+    .card-beneficio{
+        margin-bottom:30px;
+    }
+
+    .clinica{
+        padding:60px 0;
+    }
+
+    .imagens{
+
+        width:100%;
+        height:380px;
+    }
+
+    .img-fundo{
+
+        width:230px;
+        height:300px;
+    }
+
+    .img-frente{
+
+        width:220px;
+        height:260px;
+
+        left:90px;
+        top:60px;
+    }
+
+    .texto-clinica{
+
+        margin:50px auto 0;
+
+        text-align:center;
+    }
+
+    .footer-clinica .row:first-child{
+        padding:0;
+        text-align:center;
+    }
+
+    .footer-titulo{
+        margin-top:35px;
+        margin-bottom:20px;
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:25px;
+    }
+
+}
+
+
+/* Celular */
+@media (max-width:768px){
+
+    .banner{
+        height:380px;
+    }
+
+    .clinic-intro{
+        padding:45px 20px;
+    }
+
+    .clinic-intro h2{
+        font-size:24px;
+    }
+
+    .clinic-intro p{
+        font-size:16px;
+    }
+
+    .foto-esquerda,
+    .foto-direita{
+        height:300px;
+    }
+
+    .texto-direita,
+    .texto-esquerda{
+        padding:35px 22px;
+    }
+
+    .texto-direita h2,
+    .texto-esquerda h2{
+        font-size:34px;
+    }
+
+    .texto-direita p,
+    .texto-esquerda p{
+        font-size:17px;
+    }
+
+    .imagem-clinica img{
+        height:260px;
+    }
+
+    .conteudo-agendamento{
+
+        padding:45px 25px;
+    }
+
+    .conteudo-agendamento h2{
+        font-size:32px;
+    }
+
+    .conteudo-agendamento p{
+        font-size:18px;
+    }
+
+    .btn-agendar{
+
+        width:100%;
+
+        font-size:22px;
+
+        justify-content:center;
+    }
+
+    .card-beneficio{
+
+        max-width:100%;
+    }
+
+    .imagens{
+
+        height:300px;
+    }
+
+    .img-fundo{
+
+        width:180px;
+        height:230px;
+    }
+
+    .img-frente{
+
+        width:170px;
+        height:210px;
+
+        left:70px;
+        top:45px;
+    }
+
+    .texto-clinica h2{
+        font-size:36px;
+    }
+
+    .texto-clinica p{
+        font-size:18px;
+    }
+
+    .footer-divisor{
+
+        width:95%;
+    }
+
+    .footer-bottom{
+
+        width:95%;
+    }
+
+}
+
+
+/* Celulares pequenos */
+@media (max-width:576px){
+
+    .banner{
+        height:320px;
+    }
+
+    .texto-direita h2,
+    .texto-esquerda h2,
+    .conteudo-agendamento h2,
+    .texto-clinica h2{
+
+        font-size:30px;
+    }
+
+    .texto-direita p,
+    .texto-esquerda p,
+    .conteudo-agendamento p,
+    .texto-clinica p{
+
+        font-size:16px;
+    }
+
+    .img-fundo{
+
+        width:150px;
+        height:190px;
+    }
+
+    .img-frente{
+
+        width:150px;
+        height:180px;
+
+        left:55px;
+        top:40px;
+    }
+
+}

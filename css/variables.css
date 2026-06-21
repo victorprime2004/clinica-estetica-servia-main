@@ -1,0 +1,209 @@
+:root{
+    
+    /* Tipografias */
+    --font-serif:    'IBM Plex Serif', Georgia, serif;
+    --font-display:  'Julius Sans One', serif;
+    --font-ui:       'Inter', system-ui, sans-serif;
+    
+    /* Pesos */
+    --font-weight-regular: 400;
+    --font-weight-medium:  500;
+
+    /* Tamanjo de fontes */
+    --font-size-h1:   2rem;       /* 32px */
+    --font-size-h2:   1.5rem;     /* 24px */
+    --font-size-h3:   1.125rem;   /* 18px */
+    --font-size-h4:   1rem;       /* 16px */
+    --font-size-h5:   0.8125rem;  /* 13px */
+    --font-size-h6:   0.625rem;   /* 10px */
+
+    /* Escala de tamanhos — títulos display */
+    --font-size-t1:   6rem;    /* 96px — hero desktop */
+    --font-size-t2:   4rem;    /* 64px — hero mobile */
+    --font-size-t3:   3rem;    /* 48px */
+    --font-size-t4:   2.25rem; /* 36px */
+
+    /* Altura da linha */
+    --text-leading-title:  1.2;
+    --text-leading-body:   1.7;
+    --text-leading-ui:     1.5;
+
+    /* PRIMITIVOS */
+    --primitive-creme:             #FFF2DF;
+    --primitive-dourado-claro:     #F8D4A0;
+    --primitive-dourado-suave:     #F5C76C;
+    --primitive-ambar:             #F8C070;
+    --primitive-ouro:              #EAAC38;
+    --primitive-areia-dourada:     #D0A76C;
+    --primitive-marrom-dourado:    #A68358;
+    --primitive-bronze:            #9A6A27;
+    --primitive-verde-noite:       #2A3E3F;
+    --primitive-verde-noite-hv:    #2f4c4e;
+
+    --primitive-off-white:         #FDFAF6;
+    --primitive-branco-nuvem:      #F7F3EE;
+    --primitive-areia-suave:       #F5EFE6;
+    --primitive-linho:             #E8DDD0;
+    --primitive-bege-medio:        #C8BAA8;
+    --primitive-capuccino:         #7A6A58;
+    --primitive-expresso:          #3D3028;
+
+    --primitive-rosa-nevoa:        #FDF3F0;
+    --primitive-rosa-pessego:      #F5D8D0;
+    --primitive-salmao-suave:      #E8A898;
+    --primitive-terracota:         #C47060;
+    --primitive-terracota-escuro:  #8A3E30;
+    --primitive-dourado-comp:      #BE9A65;
+    --primitive-rosa-champanhe:    #F3D2B8;
+
+    --primitive-menta-gelo:        #EEF2EE;
+    --primitive-sage-claro:        #D0DDD0;
+    --primitive-sage-medio:        #8AAE8A;
+    --primitive-sage-escuro:       #4A6B4A;
+    --primitive-floresta:          #2E4E2E;
+
+    --primitive-branco-puro:       #FFFFFF;
+    --primitive-branco:            #F4F4F4;
+    --primitive-branco-quente:     #F0EBE3;
+    --primitive-texto-marrom:      #4A3F35;
+    --primitive-texto-escuro:      #2A2220;
+    --primitive-texto-topbar:      #5B4B43;
+    --primitive-fundo-formulario:  #f7f3ee;
+
+    /* Espaços */
+    --space-1:  0.25rem;  /* 4px */
+    --space-2:  0.5rem;   /* 8px */
+    --space-3:  1rem;     /* 16px */
+    --space-4:  1.5rem;   /* 24px */
+    --space-5:  2rem;     /* 32px */
+    --space-6:  2.5rem;   /* 40px */
+    --space-7:  3rem;     /* 48px */
+    --space-8:  3.5rem;   /* 56px */
+    --space-9:  4rem;     /* 64px */
+    --space-10: 4.5rem;   /* 72px */
+    --space-11: 5.625rem; /* 90px */
+
+    /* Arredondamento */
+    --radius-sm:    4px;
+    --radius-md:    8px;
+    --radius-lg:    16px;
+    --radius-xl:    24px;
+
+    /* Transições */
+    --transition-fast: 150ms ease;
+    --transition-base: 300ms ease;
+    --transition-slow: 400ms ease;
+
+    /* =========================
+            Semântico de Cor
+    ============================ */
+
+    /* --- MARCA (Identidade Visual / Dourados e Tons Base) --- */
+    --color-brand-lightest:     var(--primitive-creme);           /* Antigo base-100 */
+    --color-brand-light:        var(--primitive-dourado-claro);   /* Antigo base-200 */
+    /* --primitive-ambar e --primitive-ouro atualizados dão mais brilho à marca */
+    --color-brand-soft:         var(--primitive-dourado-suave);   /* Antigo base-300 */
+    --color-brand-main:         var(--primitive-ouro);            /* Antigo base-400 (Principal) */
+    --color-brand-secondary:    var(--primitive-areia-dourada);   /* Antigo base-500 */
+    --color-brand-medium:       var(--primitive-marrom-dourado);  /* Antigo base-600 */
+    --color-brand-dark:         var(--primitive-bronze);          /* Antigo base-700 */
+
+    /* --- AÇÃO E INTERAÇÃO (Botões, CTAs e Links ativos) --- */
+    --color-action:             var(--primitive-verde-noite);     /* Antigo base-800 */
+    --color-action-hover:       var(--primitive-verde-noite-hv);  /* Antigo base-801 */
+
+    /* --- SUPERFÍCIES E FUNDOS (Estrutura do Layout) --- */
+    --color-bg-primary:         var(--primitive-off-white);       /* Antigo background-primary */
+    --color-bg-secondary:       var(--primitive-areia-suave);     /* Antigo background-secondary */
+    --color-bg-tertiary:        var(--primitive-linho);           /* Antigo background-tertiary */
+    --color-bg-dark:            var(--primitive-capuccino);       /* Antigo background-dark */
+    --color-bg-form:            var(--primitive-fundo-formulario); 
+    --color-bg-surface-deep:    var(--primitive-expresso);        /* Ótimo para contrastar textos claros */
+    
+    /* --- BORDAS E DIVISORES --- */
+    --color-border-divider:     var(--primitive-bege-medio);      /* Antigo color-divider */
+
+    /* --- COMPLEMENTAR PRIMÁRIO (Destaques / Elementos de Atenção / Terracota) --- */
+    --color-accent-lightest:    var(--primitive-rosa-nevoa);      /* Antigo primary-lightest */
+    --color-accent-light:       var(--primitive-rosa-pessego);    /* Antigo primary-light */
+    --color-accent-medium:      var(--primitive-salmao-suave);    /* Antigo primary-medium */
+    --color-accent-main:        var(--primitive-terracota);        /* Antigo primary-dark (Destaque principal) */
+    --color-accent-deep:        var(--primitive-terracota-escuro); /* Antigo primary-deep */
+    --color-accent-gold:        var(--primitive-dourado-comp);     /* Antigo primary-gold */
+    --color-accent-champagne:   var(--primitive-rosa-champanhe);   /* Antigo primary-lightPink */
+
+    /* --- COMPLEMENTAR SECUNDÁRIO (Feedbacks Positivos / Saúde / Verdes) --- */
+    --color-success-lightest:   var(--primitive-menta-gelo);       /* Antigo secondary-lightest */
+    --color-success-light:      var(--primitive-sage-claro);       /* Antigo secondary-light */
+    --color-success-medium:     var(--primitive-sage-medio);       /* Antigo secondary-medium */
+    --color-success-dark:       var(--primitive-sage-escuro);      /* Antigo secondary-dark */
+    --color-success-deep:       var(--primitive-floresta);         /* Antigo secondary-deep */
+
+    /* --- TIPOGRAFIA (Cores de Texto) --- */
+    --color-text-pure-white:    var(--primitive-branco-puro);      /* Antigo text-purewhite */
+    --color-text-white:         var(--primitive-branco);           /* Antigo text-white */
+    --color-text-soft:          var(--primitive-branco-quente);    /* Antigo text-soft */
+    --color-text-primary:       var(--primitive-texto-marrom);     /* Antigo text-primary */
+    --color-text-dark:          var(--primitive-texto-escuro);     /* Antigo text-dark */
+    --color-text-muted:         var(--primitive-texto-topbar);     /* Antigo text-topBar */
+
+    /* =========================
+        Semântico de Tipografia
+    ============================ */
+
+    /* Famílias por Função */
+    --font-family-title:       var(--font-display); /* Julius Sans One para grandes títulos */
+    --font-family-body:        var(--font-serif);   /* IBM Plex Serif para leitura confortável */
+    --font-family-interact:    var(--font-ui);      /* Inter para botões, menus, formulários */
+
+    /* Tamanhos por Papel Executado */
+    --text-size-title1:           var(--font-size-t1); /*96px*/
+    --text-size-title2:           var(--font-size-t2); /*64px*/
+    --text-size-title3:           var(--font-size-t3); /*48px*/
+    --text-size-title4:           var(--font-size-t4); /*36px*/
+    --text-size-section-title:    var(--font-size-h1); /*32px*/
+    --text-size-section-subtitle: var(--font-size-h2); /*24px*/
+    --text-size-card-title:       var(--font-size-h3); /*18px*/
+    --text-size-body:             var(--font-size-h4); /*16px*/
+    --text-size-small:            var(--font-size-h5); /*13px*/
+    --text-size-caption:          var(--font-size-h6); /*10px*/
+
+    /* =========================
+        Semântico de Espaçamento
+    ============================ */
+
+    /* Internos (Paddings) */
+    --spacing-pad-xxs:         var(--space-1); 
+    --spacing-pad-xs:          var(--space-2); 
+    --spacing-pad-sm:          var(--space-3);  
+    --spacing-pad-smd:         var(--space-4); 
+    --spacing-pad-md:          var(--space-5); 
+    --spacing-pad-lg:          var(--space-6);
+    --spacing-pad-xlg:         var(--space-7);
+
+    /* Distâncias e Gaps */
+    --spacing-gap-inline:        var(--space-2); /*8px*/
+    --spacing-gap-stack:         var(--space-4); /*24px*/
+    --spacing-gap-section-split: var(--space-9); /*64px*/
+
+    /* ====================
+     SEMÂNTICOS DE FORMA
+     ====================== */
+  
+    --radius-interactive:      var(--radius-sm);   /* 4px - Botões e campos de formulário */
+    --radius-surface:          var(--radius-md);   /* 8px - Cards de depoimentos e serviços */
+    --radius-media:            var(--radius-lg);   /* 16px - Imagens em destaque, banners */
+    --radius-large:            var(--radius-xl);   /*24px - Extra para definição caso seja necessário*/
+  
+  /* =========================
+        Semântico de Transição
+    ============================ */
+
+    --ease-interactive: var(--transition-fast); /* Para efeitos instantâneos (ex: hover de botão) */
+    --ease-navigation:  var(--transition-base); /* Para mudanças de estado (ex: menu abrir) */
+    --ease-page-load:   var(--transition-slow); /* Para animações longas (ex: banner entrando) */
+
+    /* --- Bordas e Divisores --- */
+    --color-border-divider:      var(--primitive-bege-medio);      /* Para fundos claros */
+    --color-border-divider-dark: rgba(255, 255, 255, 0.25);         /* Para fundos escuros — ADICIONADO */
+}

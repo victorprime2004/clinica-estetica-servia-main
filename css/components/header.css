@@ -1,0 +1,342 @@
+/* Configuração Header */
+
+header {
+  width:      100%;
+  background: var(--color-action);
+  position:   fixed;
+  top:        0;
+  left:       0;
+  z-index:    9999;
+  transition: box-shadow var(--ease-navigation);
+}
+
+/* Efeito sombra ao rolar a página — ativado via JS */
+header.scrolled {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Container interno do header */
+.container-header {
+  max-width:       1400px;
+  margin:          auto;
+  padding:         0 var(--space-6);       /* 0 40px */
+  height:          var(--space-11);        /* 90px */
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo img {
+  width:   135px;
+  display: block;
+  cursor:  pointer;
+}
+
+/* ================
+   MENU DESKTOP
+   ================ */
+
+.menu-desktop {
+  display:     flex;
+  align-items: center;
+}
+
+.menu-desktop ul {
+  display:     flex;
+  align-items: center;
+  gap:         35px;                       /* valor sem token equivalente exato */
+  list-style:  none;
+  margin:      0;
+  padding:     0;
+}
+
+.menu-desktop ul li {
+  display:     flex;
+  align-items: center;
+}
+
+/* Links de navegação */
+.menu-desktop ul li a {
+  text-decoration: none;
+  color:           var(--color-text-white);
+  display:         flex;
+  align-items:     center;
+  gap:             var(--space-2);         /* 8px */
+  font-size:       var(--text-size-body);  /* 16px — mais próximo dos 15px originais */
+  font-weight:     var(--font-weight-regular);
+  transition:      color var(--ease-navigation);
+  position:        relative;
+}
+
+/* Ícones dentro dos links */
+.menu-desktop ul li a i,
+.menu-desktop ul li a svg {
+  color:      var(--color-brand-main);     /* Dourado principal */
+  transition: color var(--ease-navigation);
+}
+
+/* Hover — link */
+.menu-desktop ul li a:hover {
+  color: var(--color-text-pure-white);
+}
+
+/* Hover — ícone fica mais iluminado */
+.menu-desktop ul li a:hover i,
+.menu-desktop ul li a:hover svg {
+  color: var(--color-brand-soft);          /* Dourado suave */
+}
+
+/* Linha dourada animada abaixo do link */
+.menu-desktop ul li a::after {
+  content:    "";
+  position:   absolute;
+  left:       0;
+  bottom:     -6px;
+  width:      0%;
+  height:     1px;
+  background: var(--color-brand-main);
+  transition: width var(--ease-navigation);
+}
+
+.menu-desktop ul li a:hover::after {
+  width: 100%;
+}
+
+/* ============================================================
+   BARRA DE PESQUISA
+   ============================================================ */
+
+.search-area {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-5);             /* 32px */
+}
+
+.search-box {
+  width:        220px;
+  height:       40px;
+  border:       1px solid var(--color-brand-main);
+  border-radius: var(--radius-lg);
+  display:      flex;
+  align-items:  center;
+  overflow:     hidden;
+}
+
+.search-box input {
+  width:      100%;
+  height:     100%;
+  border:     none;
+  outline:    none;
+  background: transparent;
+  color:      var(--color-text-white);
+  padding:    0 var(--space-3);            /* 0 16px */
+}
+
+.search-box input::placeholder {
+  color: var(--color-text-white);
+}
+
+/* Botão de busca */
+.search-box button {
+  width:      50px;
+  height:     100%;
+  border:     none;
+  background: transparent;
+  color:      var(--color-brand-main);
+  cursor:     pointer;
+}
+
+/* ============================================================
+   BANDEIRAS — Seletor de idioma desktop
+   ============================================================ */
+
+.flags {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-2);             /* 8px */
+}
+
+.flags img {
+  width:        28px;
+  height:       20px;
+  object-fit:   cover;
+  display:      block;
+  cursor:       pointer;
+  border-radius: var(--radius-sm);         /* 4px */
+}
+
+/* ============================================================
+   MENU MOBILE — Hamburguer
+   ============================================================ */
+
+/* Ícone hamburguer — oculto no desktop */
+.menu-toggle {
+  display:   none;
+  font-size: 30px;
+  color:     var(--color-brand-main);
+  cursor:    pointer;
+  z-index:   10001;
+}
+
+/* Painel lateral mobile */
+.mobile-menu {
+  position:   fixed;
+  top:        0;
+  right:      -280px;                      /* escondido fora da tela */
+  width:      280px;
+  height:     100vh;
+  background: var(--color-action);         /* Verde petróleo */
+  transition: right var(--ease-slow);      /* 400ms — animação de entrada */
+  padding:    var(--space-4);              /* 24px */
+  z-index:    10000;
+}
+
+/* Estado ativo — painel visível */
+.mobile-menu.active {
+  right: 0;
+}
+
+/* Botão fechar (X) */
+.mobile-menu .close-btn {
+  text-align:    right;
+  margin-bottom: var(--space-7);           /* 48px */
+}
+
+.mobile-menu .close-btn i {
+  font-size: 45px;                         /* tamanho de ícone — valor fixo aceitável */
+  color:     var(--color-brand-main);
+  cursor:    pointer;
+}
+
+/* ============================================================
+   BANDEIRAS — Seletor de idioma mobile
+   ============================================================ */
+
+.flags-mobile {
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  gap:             var(--space-3);         /* 16px */
+  margin-top:      var(--space-6);         /* 40px */
+}
+
+.flags-mobile img {
+  width:         32px;
+  height:        22px;
+  object-fit:    cover;
+  border-radius: var(--radius-sm);
+  cursor:        pointer;
+}
+
+/* ============================================================
+   LINKS DO MENU MOBILE
+   ============================================================ */
+
+.mobile-menu ul {
+  list-style:      none;
+  display:         flex;
+  flex-direction:  column;
+  gap:             var(--space-6);         /* 40px */
+  align-items:     center;
+}
+
+.mobile-menu ul li {
+  width: 100%;
+}
+
+/* Links */
+.mobile-menu ul li a {
+  text-decoration: none;
+  color:           var(--color-text-white);
+  font-size:       20px;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             var(--space-4);         /* 24px */
+  transition:      color var(--ease-navigation);
+  position:        relative;
+}
+
+/* Linha dourada animada — centralizada no mobile */
+.mobile-menu ul li a::after {
+  content:    "";
+  position:   absolute;
+  left:       50%;
+  bottom:     -8px;
+  transform:  translateX(-50%);
+  width:      0%;
+  height:     1px;
+  background: var(--color-brand-main);
+  transition: width var(--ease-navigation);
+}
+
+.mobile-menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* Ícones */
+.mobile-menu ul li a i,
+.mobile-menu ul li a svg {
+  color:      var(--color-brand-main);
+  transition: color var(--ease-navigation);
+}
+
+/* Hover */
+.mobile-menu ul li a:hover {
+  color: var(--color-text-pure-white);
+}
+
+.mobile-menu ul li a:hover i,
+.mobile-menu ul li a:hover svg {
+  color: var(--color-brand-soft);
+}
+
+/* ============================================================
+   OVERLAY — Sombra ao abrir o menu mobile
+   ============================================================ */
+
+.overlay {
+  position:   fixed;
+  top:        0;
+  left:       0;
+  width:      100%;
+  height:     100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity:    0;
+  visibility: hidden;
+  transition: opacity var(--ease-navigation),
+              visibility var(--ease-navigation);
+  z-index:    9998;
+}
+
+.overlay.active {
+  opacity:    1;
+  visibility: visible;
+}
+
+/* ============================================================
+   RESPONSIVO — Mobile até 950px
+   ============================================================ */
+
+@media (max-width: 950px) {
+
+  /* Esconde menu e busca no mobile */
+  .menu-desktop,
+  .search-area {
+    display: none;
+  }
+
+  /* Mostra hamburguer */
+  .menu-toggle {
+    display: block;
+  }
+
+  .container-header {
+    padding: var(--space-2) var(--space-4); /* 8px 24px */
+  }
+
+  .logo img {
+    width: 95px;
+  }
+}
