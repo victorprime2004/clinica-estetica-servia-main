@@ -24,30 +24,33 @@
             <nav class="menu-desktop">
                 <!-- links desktop -->
                 <ul>
-                    <li>
-                        <a href="index.html"> <i class="fa-solid fa-house"></i> Home </a>
-                    </li>
-
-                    <li>
-                        <a href="clinica.html">
-                            <i class="fa-solid fa-spa"></i>
-                            Clínica
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="pages/servicos.html">
-                            <i class="fa-solid fa-sun"></i>
-                            Serviços
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="agendamento.html">
-                            <i class="fa-solid fa-calendar-days"></i>
-                            Agendamento
-                        </a>
-                    </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span data-i18n="menu.home">Home</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="clinica.html">
+                        <i class="fa-solid fa-spa"></i>
+                        <span data-i18n="menu.clinica">Clínica</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="pages/servicos.html">
+                        <i class="fa-solid fa-sun"></i>
+                        <span data-i18n="menu.servicos">Serviços</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="agendamento.html">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span data-i18n="menu.agendamento">Agendamento</span>
+                    </a>
+                </li>
 
                 </ul>
 
@@ -56,15 +59,15 @@
             <div class="search-area">
 
                 <div class="search-box">
-                    <input type="text" placeholder="Pesquisar">
+                    <input type="text" placeholder="Pesquisar"  data-i18n-placeholder="search.placeholder">
                     <button>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
                 <!-- bandeiras -->
                 <div class="flags">
-                    <img src="https://flagcdn.com/w40/br.png">
-                    <img src="https://flagcdn.com/w40/rs.png">
+                    <img id="btn-pt" src="https://flagcdn.com/w40/br.png" alt="Português">
+                    <img id="btn-sr" src="https://flagcdn.com/w40/rs.png" alt="Srpski">
                 </div>
 
             </div>
@@ -87,40 +90,40 @@
         <!-- links menu mobile -->
         <ul>
 
-            <li>
-                <a href="index.html">
-                    <i class="fa-solid fa-house"></i>
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="pages/clinica.html">
-                    <i class="fa-solid fa-spa"></i>
-                    Clínica
-                </a>
-            </li>
-
-            <li>
-                <a href="pages/servicos.html">
-                    <i class="fa-solid fa-sun"></i>
-                    Serviços
-                </a>
-            </li>
-
-            <li>
-                <a href="pages/agendamento.html">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    Agendamento
-                </a>
-            </li>
+    <li>
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span data-i18n="menu.home">Home</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="pages/clinica.html">
+            <i class="fa-solid fa-spa"></i>
+            <span data-i18n="menu.clinica">Clínica</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="pages/servicos.html">
+            <i class="fa-solid fa-sun"></i>
+            <span data-i18n="menu.servicos">Serviços</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="pages/agendamento.html">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span data-i18n="menu.agendamento">Agendamento</span>
+        </a>
+    </li>
 
 
         </ul>
         <div class="flags-mobile">
 
-            <img src="https://flagcdn.com/w40/br.png" alt="Português">
-            <img src="https://flagcdn.com/w40/rs.png" alt="Srpski">
+            <img id="btn-pt-mobile" src="https://flagcdn.com/w40/br.png" alt="Português">
+            <img id="btn-sr-mobile" src="https://flagcdn.com/w40/rs.png" alt="Srpski">
 
         </div>
 
@@ -802,6 +805,7 @@
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/i18n.js"></script>
 
     /* ================= mudanças ================= */
     

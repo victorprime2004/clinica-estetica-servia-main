@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "home": "Home",
+    "clinica": "Clínica",
+    "servicos": "Serviços",
+    "agendamento": "Agendamento"
+  },
+  "search": {
+    "placeholder": "Pesquisar"
+  }
+}

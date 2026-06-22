@@ -201,6 +201,10 @@ const servicos = {
 const carouselContent =
     document.getElementById("carousel-content");
 
+if (carouselContent) {
+    renderizar("massagens");
+}
+
 function renderizar(categoria) {
 
     const itens = servicos[categoria];
@@ -290,4 +294,96 @@ document
         });
 
     });
+
+// =====================================
+// TRADUÇÃO COM LIBRETRANSLATE
+// =====================================
+
+async function traduzirPagina(idiomaDestino) {
+
+    const elementos = document.querySelectorAll(
+        "h1,h2,h3,h4,h5,h6,p,a,span,button,label"
+    );
+
+    for (const elemento of elementos) {
+
+        const texto = elemento.textContent.trim();
+
+        if (!texto) continue;
+
+        try {
+
+            const response = await fetch(
+                "https://translate.astian.org/translate",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        q: texto,
+                        source: "pt",
+                        target: idiomaDestino,
+                        format: "text"
+                    })
+                }
+            );
+
+            const data = await response.json();
+
+            if (data.translatedText) {
+                elemento.textContent = data.translatedText;
+            }
+
+        } catch (erro) {
+            console.error(erro);
+        }
+    }
+}
+
+
+// EVENTO DE BANDEIRAS
+
+const btnPt = document.getElementById("btn-pt");
+const btnSr = document.getElementById("btn-sr");
+
+console.log(btnPt);
+console.log(btnSr)
+
+if (btnSr) {
+
+    btnSr.addEventListener("click", () => {
+
+        traduzirPagina("sr");
+
+        localStorage.setItem("idioma", "sr");
+    });
+
+}
+
+if (btnPt) {
+
+    btnPt.addEventListener("click", () => {
+
+        location.reload();
+
+        localStorage.setItem("idioma", "pt");
+    });
+
+}
+
+
+// MANTER IDIOMA AO TROCAR DE PÁGINA
+window.addEventListener("load", () => {
+
+    const idiomaSalvo =
+        localStorage.getItem("idioma");
+
+    if(idiomaSalvo === "sr"){
+
+        traduzirPagina("sr");
+
+    }
+
+});
 

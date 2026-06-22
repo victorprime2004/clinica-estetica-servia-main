@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "home": "Početna",
+    "clinica": "Klinika",
+    "servicos": "Usluge",
+    "agendamento": "Zakazivanje"
+  },
+  "search": {
+    "placeholder": "Pretraži"
+  }
+}
