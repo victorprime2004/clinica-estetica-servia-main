@@ -54,6 +54,7 @@
 .texto-esquerda {
   padding:          var(--spacing-pad-2xl) var(--spacing-pad-2xl);
   display:          flex;
+  padding-top: var(--spacing-hero-top);
   flex-direction:   column;
   justify-content:  center;
   width:            100%;       /*  */
