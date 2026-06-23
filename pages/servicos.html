@@ -11,13 +11,14 @@
 </head>
 
 <body>
+<div id="google_translate_element" style="display:none;"></div>
 
     <!-- menu -->
     <header id="header">
         <div class="container-header">
             <!-- logo -->
             <div class="logo">
-                <img src="../assets/images/logo-clínica.png" alt="Logo com íniciais 'E' e 'B'(estética Brasileira)">
+                <img src="../assets/images/logo-clinica.png" alt="Logo com íniciais 'E' e 'B'(estética Brasileira)">
             </div>
 
             <nav class="menu-desktop">
@@ -65,8 +66,8 @@
                 </div>
                 <!-- bandeiras -->
                 <div class="flags">
-                    <img id="btn-pt" src="https://flagcdn.com/w40/br.png" alt="Português">
-                    <img id="btn-sr" src="https://flagcdn.com/w40/rs.png" alt="Srpski">
+                    <img src="https://flagcdn.com/w40/br.png" class="lang-pt" alt="Português">
+                    <img src="https://flagcdn.com/w40/rs.png" class="lang-sr" alt="Srpski">
                 </div>
 
             </div>
@@ -122,8 +123,8 @@
         </ul>
         <div class="flags-mobile">
 
-            <img src="https://flagcdn.com/w40/br.png" alt="Português">
-            <img src="https://flagcdn.com/w40/rs.png" alt="Srpski">
+            <img src="https://flagcdn.com/w40/br.png" class="lang-pt" alt="Português">
+            <img src="https://flagcdn.com/w40/rs.png" class="lang-sr" alt="Srpski">
 
         </div>
 
@@ -236,7 +237,7 @@
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselTratamentos"
                     data-bs-slide="prev">
 
-                    <!-- seta da esqiuerda -->
+                    <!-- seta da esquerda -->
                     <span class="seta-carousel">
                         <i class="fa-solid fa-chevron-left"></i>
                     </span>
@@ -258,6 +259,84 @@
         </div>
 
     </section>
+
+        <!-- Modal de Serviço -->
+    <div class="modal fade" id="modalServico" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+
+            <div class="modal-content modal-estetica">
+
+                <button type="button" class="btn-close modal-close" data-bs-dismiss="modal">
+                </button>
+
+                <div class="modal-body">
+                    <div class="row align-items-start">
+                        <div class="col-lg-4">
+
+                            <img id="modalImagem" class="modal-imagem" src="" alt="Serviço">
+
+                        </div>
+
+                        <div class="col-lg-8">
+                            <h2 id="modalTitulo"></h2>
+                            <p id="modalDescricao"></p>
+
+                            <div class="regioes-servico">
+
+                                <span>Regiões do corpo :</span>
+
+                                <span class="badge-regiao"> Corpo Todo
+                                </span>
+                                   
+
+                            </div>
+
+                            <div class="preco-box">
+
+                                <small>Valor do tratamento</small>
+
+                                <h3 id="modalPreco"></h3>
+
+                                <small id="modalDuracao"></small>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="infos-box">
+                        <div class="row">
+                            <div class="col-lg-4">
+
+                                <h4 class="modal-titulo">No que este tratamento ajuda?</h4>
+
+                                <div id="modalBeneficios" class="beneficios-grid"></div>
+
+                            </div>
+
+                            <div class="col-lg-8">
+
+                                <h4 class="modal-titulo">Informações adicionais</h4>
+
+                                <div id="modalInformacoes" class="informacoes-grid"></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        
+                        <a href="../pages/agendamento.html" class="btn-agendar-modal">
+                            <i class="fa-solid fa-spa"></i>
+                            Agendar
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- Section Agendamento -->
     <section class="section-agendamento">
@@ -282,7 +361,7 @@
                         <p> Reserve seu horário e venha viver uma experiência de cuidado,
                             conforto e bem-estar em um ambiente pensado para você. </p>
 
-                        <a href="#" class="btn-banner">
+                        <a href="agendamento.html" class="btn-banner">
                             <i class="fa-regular fa-calendar-check"></i>
                             Agendar
                         </a>
@@ -486,10 +565,10 @@
 
                     <ul class="footer-lista footer-links">
 
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/clinica.html">Clínica</a></li>
-                        <li><a href="pages/servicos.html">Serviços</a></li>
-                        <li><a href="pages/agendamento.html">Agendamento</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="clinica.html">Clínica</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="agendamento.html">Agendamento</a></li>
 
                     </ul>
 
@@ -504,9 +583,9 @@
 
                     <div class="footer-redes d-flex justify-content-center gap-4 mt-4">
 
-                        <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+                        <a href="https://wa.me/38163241158"> <i class="fa-brands fa-whatsapp"></i> </a>
 
-                        <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="https://www.instagram.com/rc.esteticabrasileira"> <i class="fa-brands fa-instagram"></i> </a>
                     </div>
                 </div>
             </div>
@@ -517,7 +596,7 @@
             <!-- logo + mini história -->
             <div class="row align-items-center justify-content-center g-3">
                 <div class="col-12 col-md-2 text-center text-md-end">
-                    <img src="../assets/images/logo-clínica.png" alt="Logo Clínica" class="footer-logo">
+                    <img src="../assets/images/logo-clinica.png" alt="Logo Clínica" class="footer-logo">
                 </div>
 
                 <div class="col-12 col-md-6">
@@ -535,8 +614,8 @@
 
 
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/auto-translate.js"></script>
     <script src="../js/script.js"></script>
-    <script src="../js/i18n.js"></script>
 </body>
 
 </html>

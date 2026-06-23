@@ -1,0 +1,62 @@
+/* ============================================================
+   BANNER — Hero compartilhado entre páginas
+   Usado em: home, serviços, clínica, agendamento
+   ============================================================ */
+
+/* ============================================================
+   BANNER PRINCIPAL
+   ============================================================ */
+ 
+.banner {
+  position:             relative;
+  width:                100%;
+  height:               600px;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(245, 238, 230, 0.35) 60%,
+      rgba(245, 238, 230, 0.05) 100%
+    ),
+    url(../../assets/images/background-banner-home.png);
+  background-size:      cover;
+  background-position:  center right;
+  display:              flex;
+  align-items:          center;
+  padding:              var(--spacing-pad-null) 8%;
+}
+
+.banner-content {
+  max-width:   600px;
+  padding-top: var(--spacing-hero-top); /* 140px */
+}
+
+.banner-content h1 {
+  font-size:     var(--text-size-title2-5); /* 52px */
+  line-height:   var(--text-leading-title);
+  color:         var(--color-text-primary);
+  font-weight:   var(--font-weight-regular);
+  margin-bottom: var(--spacing-pad-md);     /* 32px */
+}
+
+.banner-content p {
+  font-size:     var(--text-size-card-title); /* 18px */
+  line-height:   var(--text-leading-body);
+  color:         var(--color-text-muted);
+  margin-bottom: var(--spacing-pad-xlg);      /* 48px */
+}
+
+
+/* Responsivo */
+@media (max-width: 950px) {
+  .banner {
+    height:              auto;
+    padding:             var(--spacing-hero-top) var(--spacing-pad-smd) var(--spacing-pad-5xl);
+    background-position: 72%;
+  }
+
+  .banner-content h1 {
+    font-size:     var(--text-size-title4);
+    line-height:   var(--text-leading-display);
+    margin-bottom: var(--spacing-pad-smd);
+  }
+}

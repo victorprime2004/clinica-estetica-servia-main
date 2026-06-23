@@ -12,45 +12,43 @@
 </head>
 
 <body>
+<div id="google_translate_element" style="display:none;"></div>
 
     <!-- menu -->
     <header id="header">
         <div class="container-header">
             <!-- logo -->
             <div class="logo">
-                <img src="assets/images/logo-clínica.png" alt="Logo com íniciais 'E' e 'B'(estética Brasileira)">
+                <img src="assets/images/logo-clinica.png" alt="Logo com íniciais 'E' e 'B'(estética Brasileira)">
             </div>
 
             <nav class="menu-desktop">
                 <!-- links desktop -->
                 <ul>
-                <li>
-                    <a href="index.html">
-                        <i class="fa-solid fa-house"></i>
-                        <span data-i18n="menu.home">Home</span>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="clinica.html">
-                        <i class="fa-solid fa-spa"></i>
-                        <span data-i18n="menu.clinica">Clínica</span>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="pages/servicos.html">
-                        <i class="fa-solid fa-sun"></i>
-                        <span data-i18n="menu.servicos">Serviços</span>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="agendamento.html">
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span data-i18n="menu.agendamento">Agendamento</span>
-                    </a>
-                </li>
+                    <li>
+                        <a href="index.html"> <i class="fa-solid fa-house"></i> Home </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/clinica.html">
+                            <i class="fa-solid fa-spa"></i>
+                            Clínica
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/servicos.html">
+                            <i class="fa-solid fa-sun"></i>
+                            Serviços
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/agendamento.html">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Agendamento
+                        </a>
+                    </li>
 
                 </ul>
 
@@ -59,15 +57,15 @@
             <div class="search-area">
 
                 <div class="search-box">
-                    <input type="text" placeholder="Pesquisar"  data-i18n-placeholder="search.placeholder">
+                    <input type="text" placeholder="Pesquisar">
                     <button>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
                 <!-- bandeiras -->
                 <div class="flags">
-                    <img id="btn-pt" src="https://flagcdn.com/w40/br.png" alt="Português">
-                    <img id="btn-sr" src="https://flagcdn.com/w40/rs.png" alt="Srpski">
+                    <img src="https://flagcdn.com/w40/br.png" class="lang-pt" alt="Português">
+                    <img src="https://flagcdn.com/w40/rs.png" class="lang-sr" alt="Srpski">
                 </div>
 
             </div>
@@ -90,40 +88,40 @@
         <!-- links menu mobile -->
         <ul>
 
-    <li>
-        <a href="index.html">
-            <i class="fa-solid fa-house"></i>
-            <span data-i18n="menu.home">Home</span>
-        </a>
-    </li>
-    
-    <li>
-        <a href="pages/clinica.html">
-            <i class="fa-solid fa-spa"></i>
-            <span data-i18n="menu.clinica">Clínica</span>
-        </a>
-    </li>
-    
-    <li>
-        <a href="pages/servicos.html">
-            <i class="fa-solid fa-sun"></i>
-            <span data-i18n="menu.servicos">Serviços</span>
-        </a>
-    </li>
-    
-    <li>
-        <a href="pages/agendamento.html">
-            <i class="fa-solid fa-calendar-days"></i>
-            <span data-i18n="menu.agendamento">Agendamento</span>
-        </a>
-    </li>
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/clinica.html">
+                    <i class="fa-solid fa-spa"></i>
+                    Clínica
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/servicos.html">
+                    <i class="fa-solid fa-sun"></i>
+                    Serviços
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/agendamento.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Agendamento
+                </a>
+            </li>
 
 
         </ul>
         <div class="flags-mobile">
 
-            <img id="btn-pt-mobile" src="https://flagcdn.com/w40/br.png" alt="Português">
-            <img id="btn-sr-mobile" src="https://flagcdn.com/w40/rs.png" alt="Srpski">
+            <img src="https://flagcdn.com/w40/br.png" class="lang-pt" alt="Português">
+            <img src="https://flagcdn.com/w40/rs.png" class="lang-sr" alt="Srpski">
 
         </div>
 
@@ -175,7 +173,7 @@
             <p> Na <span id="span-gold-banner">Estética Brasileira</span>, cada detalhe foi pensado para proporcionar
                 uma experiência sofisticada, acolhedora e focada no seu bem-estar. </p>
 
-            <a href="#" class="btn-banner"> <i class="fa-solid fa-calendar-check"></i> Agendar </a>
+            <a href="pages/agendamento.html" class="btn-banner"> <i class="fa-solid fa-calendar-check"></i> Agendar </a>
         </div>
     </section>
 
@@ -236,7 +234,7 @@
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/images/img-mulher-clinica.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/images/img-mulher-clinica.jpg" class="d-block w-100 " alt="...">
                 </div>
                 <div class="carousel-item">
                     <img src="assets/images/img-beauty.jpg" class="d-block w-100" alt="...">
@@ -428,7 +426,7 @@
             <!-- DESKTOP -->
             <div class="row justify-content-center g-4 d-none d-md-flex">
 
-                <div class="col-md-3">
+                <div class="col-md-4">
 
                     <div class="card h-100">
 
@@ -460,7 +458,7 @@
 
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
 
                     <div class="card h-100">
 
@@ -492,7 +490,7 @@
 
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
 
                     <div class="card h-100">
 
@@ -529,7 +527,7 @@
             <!-- Botão -->
             <div class="text-center mt-5">
 
-                <a href="#" class="btn-banner">
+                <a href="pages/agendamento.html" class="btn-banner">
                     <i class="fa-solid fa-calendar-check"></i>
                     Agendar
                 </a>
@@ -774,9 +772,9 @@
 
                     <div class="footer-redes d-flex justify-content-center gap-4 mt-4">
 
-                        <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+                        <a href="https://wa.me/38163241158"> <i class="fa-brands fa-whatsapp"></i> </a>
 
-                        <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="https://www.instagram.com/rc.esteticabrasileira"> <i class="fa-brands fa-instagram"></i> </a>
                     </div>
                 </div>
             </div>
@@ -787,7 +785,7 @@
             <!-- logo + mini história -->
             <div class="row align-items-center justify-content-center g-3">
                 <div class="col-12 col-md-2 text-center text-md-end">
-                    <img src="assets/images/logo-clínica.png" alt="Logo Clínica" class="footer-logo">
+                    <img src="assets/images/logo-clinica.png" alt="Logo Clínica" class="footer-logo">
                 </div>
 
                 <div class="col-12 col-md-6">
@@ -804,11 +802,8 @@
     </footer>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/i18n.js"></script>
-
-    /* ================= mudanças ================= */
-    
+    <script src="./js/auto-translate.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,152 @@
+
+/* ============================================================
+   TRATAMENTOS — Carousel de serviços com filtro
+   ============================================================ */
+
+.tratamentos-section {
+  padding:    var(--spacing-section-lg) var(--spacing-pad-null); /* 100px */
+  background: url("../../assets/images/background-avaliacoes.png") center center/cover no-repeat;
+}
+
+.subtitulo-tratamentos {
+  font-size: var(--text-size-card-title); /* 18px */
+  color:     var(--color-text-primary);
+}
+
+.titulo-tratamentos {
+  font-size:  var(--text-size-title4); /* 36px */
+  color:      var(--color-text-primary);
+  margin-top: var(--spacing-pad-xxs);  /* 4px */
+}
+
+/* Botão de filtro — base já vem de components/button.css,
+   aqui só o estado ativo específico desta página */
+.btn-filtro.active {
+  background: var(--color-brand-secondary);
+}
+
+/* Carousel interno */
+.carousel-inner {
+  transition: background-color var(--ease-navigation);
+  min-height: 470px; /* tamanho fixo para não 'tremer' a tela */
+}
+
+.carousel-item {
+  padding: var(--spacing-pad-xs) var(--spacing-pad-3xl); /* 8px 64px */
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  width:   auto;
+  opacity: 1;
+}
+
+.carousel-control-prev {
+  left: -35px;
+}
+
+.carousel-control-next {
+  right: -35px;
+}
+
+/* Círculo decorativo em volta da seta */
+.seta-carousel {
+  width:            55px;
+  height:           55px;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  border-radius:    50%;
+  background:       rgba(255, 255, 255, 0.75);
+  backdrop-filter:  blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow:       var(--shadow-sm);
+}
+
+.seta-carousel i {
+  font-size: var(--icon-size-md); /* 20px — aproximação de 22px original */
+  color:     var(--color-accent-gold);
+}
+
+.seta-carousel:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.cards-row {
+  display:         flex;
+  justify-content: center;
+  gap:             var(--spacing-pad-content); 
+}
+
+.img-card-servico {
+  width:         100%;
+  height:        220px;
+  object-fit:    cover;
+  border-radius: var(--radius-media); 
+  display:       block;
+}
+
+/* Card de tratamento */
+.tratamentos-section .card {
+  background:    var(--color-brand-secondary);
+  border:        none;
+  border-radius: var(--radius-2lg); 
+  padding:       var(--spacing-pad-xs); 
+  overflow:      hidden;
+  width:         263px;
+  height:        430px;
+}
+
+.tratamentos-section .card-body {
+  background: transparent;
+}
+
+.card-title {
+  color:     var(--color-text-primary);
+  font-size: var(--text-size-card-title); 
+}
+
+.card-text {
+  color:     var(--color-text-primary);
+  font-size: var(--text-size-small); 
+}
+
+.preco-servico {
+  color:       var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 768px) {
+
+  .tratamentos-section .card {
+    width:     100%;
+    max-width: 300px;
+    height:    430px;
+    margin:    auto;
+  }
+
+  .carousel-item {
+    padding: var(--spacing-pad-null) var(--spacing-pad-smd); 
+  }
+
+  .cards-row {
+    justify-content: center;
+  }
+
+  .cards-row .card-wrapper {
+    display: none;
+  }
+
+  .cards-row .card-wrapper:first-child {
+    display: block;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+}

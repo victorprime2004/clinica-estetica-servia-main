@@ -1,0 +1,4 @@
+.card-wrapper{
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}

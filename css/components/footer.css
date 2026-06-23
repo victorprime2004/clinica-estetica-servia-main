@@ -1,6 +1,6 @@
 /*Configuração do Footer*/
 .footer-clinica {
-  background:  var(--color-bg-dark);     
+  background:  var(--color-action);     
   padding:     var(--space-11) 0;          /* 90px vertical, 0 horizontal */
   color:       var(--color-text-white);
 }

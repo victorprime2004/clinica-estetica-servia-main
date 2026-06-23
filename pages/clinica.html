@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
+<div id="google_translate_element" style="display:none;"></div>
 
-    <!-- menu -->
+     <!-- menu -->
     <header id="header">
         <div class="container-header">
             <!-- logo -->
             <div class="logo">
-                <img src="../assets/images/logo-clínica.png" alt="Logo com íniciais 'E' e 'B'(estética Brasileira)">
+                <img src="../assets/images/logo-clinica.png" alt="Logo com íniciais 'E' e 'B'(estética Brasileira)">
             </div>
 
             <nav class="menu-desktop">
@@ -67,8 +66,8 @@
                 </div>
                 <!-- bandeiras -->
                 <div class="flags">
-                    <img id="btn-pt" src="https://flagcdn.com/w40/br.png" alt="Português">
-                    <img id="btn-sr" src="https://flagcdn.com/w40/rs.png" alt="Srpski">
+                    <img src="https://flagcdn.com/w40/br.png" class="lang-pt" alt="Português">
+                    <img src="https://flagcdn.com/w40/rs.png" class="lang-sr" alt="Srpski">
                 </div>
 
             </div>
@@ -123,15 +122,18 @@
         </ul>
         <div class="flags-mobile">
 
-            <img src="https://flagcdn.com/w40/br.png" alt="Português">
-            <img src="https://flagcdn.com/w40/rs.png" alt="Srpski">
+            <img src="https://flagcdn.com/w40/br.png" class="lang-pt" alt="Português">
+            <img src="https://flagcdn.com/w40/rs.png" class="lang-sr" alt="Srpski">
 
         </div>
 
     </div>
+
+    <div class="overlay" id="overlay"></div>
+
     <!-- Banner -->
 
-    <section class="banner">
+    <section class="banner-clinica">
 
         <div class="banner-topbar">
             <div class="banner-topbar-content">
@@ -225,7 +227,7 @@
             </div>
 
             <!-- Segunda linha -->
-            <div class="row g-0 align-items-center">
+            <div class="row g-0 align-items-stretch">
 
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="texto-esquerda">
@@ -263,14 +265,12 @@
                     <img src="../assets/images/imagem4.jpeg" alt="">
                 </div>
 
-                <div class="linha-vertical"></div>
-
             </div>
 
         </div>
     </section>
 
-    <section class="agendamento">
+    <section class="clinica-page__agendamento">
         <div class="container-fluid p-0">
 
             <div class="row g-0 align-items-center">
@@ -293,7 +293,7 @@
                             para você.
                         </p>
 
-                        <a href="#" class="btn-agendar">
+                        <a href="agendamento.html" class="btn-agendar">
                             &#10048; Agendar
                         </a>
 
@@ -305,10 +305,10 @@
         </div>
     </section>
 
-    <section class="beneficios">
+    <section class="clinica-page__beneficios">
         <div class="container">
 
-            <div class="linha"></div>
+            <div class="clinica-page__linha"></div>
 
             <div class="row justify-content-center g-5">
 
@@ -364,19 +364,19 @@
 
             </div>
 
-            <div class="linha"></div>
+            <div class="clinica-page__linha"></div>
 
         </div>
     </section>
 
-    <section class="clinica">
+    <section class="clinica-page__secao">
         <div class="container">
 
             <div class="row align-items-center">
 
                 <div class="col-lg-6">
 
-                    <div class="imagens">
+                    <div class="clinica-page__imagens">
 
                         <img src="../assets/images/imagemMaior.jpeg" class="img-fundo" alt="">
 
@@ -415,11 +415,12 @@
 
         </div>
     </section>
+       <!-- Footer -->
     <footer class="footer-clinica py-5">
         <div class="container">
 
             <div class="row gy-5 text-center justify-content-center px-md-4">
-
+                <div class="row gy-5 text-center justify-content-between px-lg-5"></div>
 
                 <!-- COLUNA UM -->
                 <div class="col-12 col-md-3">
@@ -463,10 +464,10 @@
 
                     <ul class="footer-lista footer-links">
 
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/clinica.html">Clínica</a></li>
-                        <li><a href="pages/servicos.html">Serviços</a></li>
-                        <li><a href="pages/agendamento.html">Agendamento</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="clinica.html">Clínica</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="agendamento.html">Agendamento</a></li>
 
                     </ul>
 
@@ -481,9 +482,9 @@
 
                     <div class="footer-redes d-flex justify-content-center gap-4 mt-4">
 
-                        <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+                        <a href="https://wa.me/38163241158"> <i class="fa-brands fa-whatsapp"></i> </a>
 
-                        <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="https://www.instagram.com/rc.esteticabrasileira"> <i class="fa-brands fa-instagram"></i> </a>
                     </div>
                 </div>
             </div>
@@ -491,26 +492,27 @@
 
             <hr class="footer-divisor">
 
-            <div class="footer-bottom">
+            <!-- logo + mini história -->
+            <div class="row align-items-center justify-content-center g-3">
+                <div class="col-12 col-md-2 text-center text-md-end">
+                    <img src="../assets/images/logo-clinica.png" alt="Logo Clínica" class="footer-logo">
+                </div>
 
-                <img src="../assets/images/image 9.png" class="footer-logo" alt="Logo">
-
-                <p class="footer-texto">
-                    Na Clínica Estética Brasileira, acreditamos que autoestima e bem-estar caminham juntos.
-                    Com atendimento personalizado e tecnologia avançada, oferecemos tratamentos estéticos
-                    modernos para realçar a beleza natural, promover confiança e proporcionar uma experiência
-                    de cuidado única para cada cliente.
-                </p>
-
+                <div class="col-12 col-md-6">
+                    <p class="footer-texto mb-0"> Na Clínica Estética Brasileira, acreditamos que autoestima e bem-estar
+                        caminham juntos. Com atendimento personalizado e tecnologia avançada,
+                        oferecemos tratamentos estéticos modernos para realçar a beleza natural,
+                        promover confiança e proporcionar uma experiência de cuidado única para
+                        cada cliente. </p>
+                </div>
             </div>
 
+        </div>
+
     </footer>
-
- <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/auto-translate.js"></script>
     <script src="../js/script.js"></script>
-    <script src="../js/i18n.js"></script>
-
-
 </body>
 
 </html>

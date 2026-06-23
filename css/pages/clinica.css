@@ -1,0 +1,440 @@
+/* =============
+   CLINICA.CSS 
+   ============= */
+ 
+
+.banner-clinica {
+  position:             relative;
+  width:                100%;
+  height:               600px;
+  background-image:
+
+    url("../../assets/images/banner1.jpeg");
+  
+}
+
+.clinic-intro {
+  background:  var(--color-accent-main); 
+  padding:     var(--spacing-pad-3xl) var(--spacing-pad-sm);  
+  text-align:  center;
+}
+ 
+.clinic-intro h2 {
+  color:         var(--color-text-pure-white);
+  font-size:     var(--text-size-section-title); 
+  font-weight:   var(--font-weight-regular);
+  margin-bottom: var(--spacing-pad-sm);          
+  font-family:   var(--font-family-body);         
+}
+ 
+.clinic-intro p {
+  max-width:   720px;
+  margin:      var(--spacing-pad-null) auto;
+  color:       var(--color-text-soft);            
+  font-size:   var(--text-size-section-subtitle); 
+  line-height: var(--text-leading-body);
+  font-weight: var(--font-weight-light);
+}
+ 
+.sobre-profissional {
+  background: var(--color-bg-secondary); 
+}
+ 
+.foto-esquerda,
+.foto-direita {
+  width:      100%;    
+  height:     100%px;   
+  min-height: 500px;      
+  max-height: 850px;
+  object-fit: cover;
+  display:    block;
+}
+ 
+.texto-direita,
+.texto-esquerda {
+  padding:          var(--spacing-pad-2xl) var(--spacing-pad-2xl);
+  display:          flex;
+  flex-direction:   column;
+  justify-content:  center;
+  width:            100%;       /*  */
+  min-width:        0;          /*  */
+  overflow-wrap:    break-word; /*  */
+  box-sizing:       border-box; /*  */
+}
+ 
+.texto-direita h2,
+.texto-esquerda h2 {
+  font-family:   var(--font-family-title); 
+  font-size:     var(--text-size-title3);  
+  font-weight:   var(--font-weight-regular);
+  color:         var(--color-text-primary);  
+}
+ 
+.texto-direita p,
+.texto-esquerda p {
+  font-family:   var(--font-family-body); 
+  font-size:     var(--text-size-section-subtitle); 
+  line-height:   var(--text-leading-extra-loose);
+  color:         var(--color-text-faded);
+  margin-bottom: var(--spacing-pad-sm);   
+  text-align:    justify;
+}
+ 
+ 
+.galeria {
+  background: var(--color-bg-secondary); 
+  padding:    var(--spacing-pad-lg) var(--spacing-pad-null); 
+}
+ 
+.imagem-wrapper {
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  gap:              var(--spacing-pad-mmd); 
+}
+ 
+.imagem-clinica {
+  flex: 1;
+}
+ 
+.imagem-clinica img {
+  width:         100%;
+  height:        500px;
+  object-fit:    cover;
+  border-radius: var(--radius-xl); 
+  display:       block;
+}
+ 
+.linha-vertical {
+  width:        1px;
+  height:       230px;
+  background:   var(--color-border-divider); 
+  margin-left:  var(--spacing-pad-lg); 
+  flex-shrink:  0;
+}
+ 
+ 
+.clinica-page__agendamento {
+  background: var(--primitive-marrom-dourado);
+}
+ 
+.img-spa {
+  width:      100%;
+  height:     600px;
+  object-fit: cover;
+  display:    block;
+}
+ 
+.conteudo-agendamento {
+  min-height: 600px;
+  display:          flex;
+  flex-direction:   column;
+  justify-content:  center;
+  padding-left:     var(--spacing-pad-2xl);  
+  padding-right:    var(--spacing-section-md); 
+}
+ 
+.conteudo-agendamento h2 {
+  font-family:   var(--font-family-title); 
+  font-size:     var(--text-size-title2-5); 
+  font-weight:   var(--font-weight-regular);
+  color:         var(--color-text-soft);
+  line-height:   var(--text-leading-title);
+  max-width:     520px;
+  margin-bottom: var(--spacing-pad-2xl);    
+}
+ 
+.conteudo-agendamento p {
+  font-family:   var(--font-family-title); 
+  font-size:     var(--text-size-section-subtitle); 
+  font-weight:   var(--font-weight-regular);
+  color:         var(--color-text-soft);
+  line-height:   var(--text-leading-title);
+  max-width:     430px;
+  margin-bottom: var(--spacing-pad-2xl);    
+}
+ 
+.btn-agendar {
+  display:          inline-flex;
+  align-items:      center;
+  justify-content:  center;
+  gap:              var(--spacing-pad-xs); 
+  background:       var(--color-action);
+  color:            var(--color-text-soft);
+  font-family:      var(--font-family-title); 
+  font-size:        var(--text-size-section-subtitle);
+  font-weight:      var(--font-weight-regular);
+  padding:          var(--spacing-pad-sm) var(--spacing-pad-2xl); 
+  border:           none;
+  border-radius:    var(--radius-xl); 
+  text-decoration:  none;
+  transition:       background-color var(--ease-navigation);
+}
+ 
+.btn-agendar:hover {
+  background: var(--color-action-hover);
+  color:      var(--color-text-pure-white);
+}
+ 
+.clinica-page__beneficios {
+  background: var(--color-accent-main); 
+  padding:    var(--spacing-pad-3xl) var(--spacing-pad-null); 
+}
+ 
+.clinica-page__linha {
+  width:      90%;
+  height:     1px;
+  background: var(--color-brand-secondary); 
+  margin:     var(--spacing-pad-null) auto var(--spacing-pad-2xl); 
+}
+ 
+.card-beneficio {
+  background:    var(--primitive-linho); 
+  width:         100%;
+  max-width:     280px;
+  min-height:    330px;
+  margin:        auto;
+  border-radius: var(--radius-lg); 
+  padding:       var(--spacing-pad-smd) var(--spacing-pad-sm); 
+  text-align:    center;
+  transition:    transform var(--ease-navigation);
+  margin-bottom:  var(--spacing-pad-2xl);
+}
+ 
+.card-beneficio:hover {
+  transform: translateY(-6px);
+}
+ 
+.card-beneficio h3 {
+  font-family:   var(--font-family-title); 
+  font-size:     var(--text-size-section-title); 
+  font-weight:   var(--font-weight-regular);
+  color:         var(--color-text-muted);
+  line-height:   var(--text-leading-title);
+  margin-bottom: var(--spacing-pad-sm); 
+}
+ 
+.card-beneficio p {
+  font-family: var(--font-family-title); 
+  font-size:   var(--text-size-card-title); 
+  color:       var(--color-text-muted);
+  line-height: var(--text-leading-title);
+  margin:      var(--spacing-pad-null);
+}
+ 
+.linha:last-child {
+  margin-top:    var(--spacing-pad-2xl); 
+  margin-bottom: var(--spacing-pad-null);
+}
+ 
+.clinica-page__secao {
+  background: var(--primitive-linho); 
+  padding:    var(--spacing-section-md) var(--spacing-pad-null); 
+}
+ 
+.clinica-page__imagens {
+  position: relative;
+  width:     100%;
+  max-width: 500px;
+  height:    420px;
+  margin:   auto;
+}
+ 
+
+.img-fundo {
+  position:      absolute;
+  top:           0;
+  left:          0;
+  width:         280px;
+  height:        360px;
+  object-fit:    cover;
+  border-radius: var(--radius-md); 
+}
+ 
+
+.img-frente {
+  position:      absolute;
+  top:           80px;
+  left:          120px;
+  width:         270px;
+  height:        300px;
+  object-fit:    cover;
+  border-radius: var(--radius-md);
+  box-shadow:    var(--shadow-lg);
+}
+ 
+.texto-clinica {
+  max-width:    430px;
+  margin-left:  var(--spacing-pad-lg); 
+}
+ 
+.texto-clinica h2 {
+  font-family:   var(--font-family-title); 
+  font-size:     var(--text-size-title3);  
+  font-weight:   var(--font-weight-regular);
+  color:         var(--color-text-muted);
+  margin-bottom: var(--spacing-pad-smd);   
+}
+.texto-clinica p {
+  font-family: var(--font-family-title); 
+  font-size:   var(--text-size-card-title); 
+  color:       var(--color-text-muted);
+  line-height: var(--text-leading-title);
+  margin-bottom: var(--spacing-pad-sm); 
+}
+ 
+ 
+/* =============
+   RESPONSIVO
+   ============= */
+ 
+@media (max-width: 1200px) {
+ 
+  .texto-direita,
+  .texto-esquerda {
+    padding: var(--spacing-pad-lg);
+    
+  }
+ 
+  .texto-direita h2,
+  .texto-esquerda h2 {
+    font-size: var(--text-size-title4); 
+  }
+ 
+  .texto-direita p,
+  .texto-esquerda p {
+    font-size: var(--text-size-card-title);
+  }
+ 
+  .conteudo-agendamento {
+    padding: var(--spacing-pad-lg); 
+  }
+ 
+}
+ 
+ 
+/* Celular */
+@media (max-width: 768px) {
+  
+
+  .clinic-intro {
+    padding: var(--spacing-pad-lg) var(--spacing-pad-lg); /* 32px 24px — aproximação de 45px 20px */
+  }
+ 
+  .clinic-intro h2 {
+    font-size: var(--text-size-title4); /* 36px — aproximação de 24px, ver nota crítica abaixo */
+  }
+ 
+  .clinic-intro p {
+    font-size: var(--text-size-body); /* 16px */
+  }
+ 
+  .foto-esquerda,
+  .foto-direita {
+    height: 300px;
+  }
+ 
+  .texto-direita,
+  .texto-esquerda {
+    padding: var(--spacing-pad-md) var(--spacing-pad-smd);
+    width:            100%;      /* ADICIONAR — garante que respeita o col */
+    min-width:        0;         /* ADICIONAR — fix clássico de overflow em flexbox */
+    overflow-wrap:    break-word; /* ADICIONAR — quebra palavras longas */
+    box-sizing:       border-box; /* ADICIONAR — padding não extrapola a largura */
+  }
+ 
+  .texto-direita h2,
+  .texto-esquerda h2 {
+    font-size: var(--text-size-title4); /* 36px — aproximação de 34px */
+  }
+ 
+  .texto-direita p,
+  .texto-esquerda p {
+    font-size: var(--text-size-card-title); /* 18px — aproximação de 17px */
+  }
+ 
+  .imagem-clinica img {
+    height: 260px;
+  }
+ 
+  .conteudo-agendamento {
+    padding: var(--spacing-pad-md) var(--spacing-pad-smd); /* 32px 24px — aproximação de 45px 25px */
+  }
+ 
+  .conteudo-agendamento h2 {
+    font-size: var(--text-size-section-title); /* 32px */
+  }
+ 
+  .conteudo-agendamento p {
+    font-size: var(--text-size-card-title); /* 18px */
+  }
+ 
+  .btn-agendar {
+    width:           100%;
+    font-size:       var(--text-size-section-subtitle); /* 24px — aproximação de 22px */
+    justify-content: center;
+  }
+  
+
+  .card-beneficio {
+    
+  }
+ 
+  .clinica-page__imagens {
+    height: 300px;
+  }
+ 
+  .img-fundo {
+    width:  180px;
+    height: 230px;
+  }
+ 
+  .img-frente {
+    width:  170px;
+    height: 210px;
+    left:   70px;
+    top:    45px;
+  }
+ 
+  .texto-clinica h2 {
+    font-size: var(--text-size-title4); /* 36px */
+  }
+ 
+  .texto-clinica p {
+    font-size: var(--text-size-card-title); /* 18px */
+  }
+ 
+  
+}
+ 
+ 
+/* Celulares pequenos */
+@media (max-width: 576px) {
+ 
+  .texto-direita h2,
+  .texto-esquerda h2,
+  .conteudo-agendamento h2,
+  .texto-clinica h2 {
+    font-size: var(--text-size-section-title); /* 32px — aproximação de 30px */
+  }
+ 
+  .texto-direita p,
+  .texto-esquerda p,
+  .conteudo-agendamento p,
+  .texto-clinica p {
+    font-size: var(--text-size-body); /* 16px */
+  }
+ 
+  .img-fundo {
+    width:  150px;
+    height: 190px;
+  }
+ 
+  .img-frente {
+    width:  150px;
+    height: 180px;
+    left:   55px;
+    top:    40px;
+  }
+}
+ 

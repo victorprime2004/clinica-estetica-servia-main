@@ -1,0 +1,252 @@
+/* ============================================================
+   MODAL.CSS — Modal de detalhes dos serviços
+   Usado na página de serviços
+   ============================================================ */
+ 
+ 
+/* ============================================================
+   ESTRUTURA DO MODAL
+   ============================================================ */
+ 
+.modal-dialog {
+  margin-top: var(--spacing-section-md); 
+}
+ 
+.modal-estetica {
+  border:        none;
+  border-radius: var(--radius-xl);       
+  overflow:      hidden;
+  box-shadow:    var(--shadow-lg);
+  background:    var(--color-bg-tertiary); 
+}
+ 
+.modal-close {
+  position: absolute;
+  right:    var(--spacing-pad-sm);      
+  top:      var(--spacing-pad-sm);
+  z-index:  10;
+}
+ 
+.modal-body {
+  padding: var(--spacing-pad-lg); 
+}
+ 
+ 
+/* ==================
+   IMAGEM DO MODAL
+   ================== */
+ 
+.modal-imagem {
+  width:         100%;
+  height:        320px;
+  object-fit:    cover;
+  border-radius: var(--radius-lg); /* 16px — aproximação de 18px */
+}
+ 
+ 
+/* ====================
+   TÍTULOS E TEXTO
+   ===================== */
+ 
+#modalTitulo {
+  color:         var(--color-text-primary); 
+  font-size:     var(--text-size-section-title); 
+  margin-bottom: var(--spacing-pad-sm);     
+}
+ 
+#modalDescricao {
+  color:       var(--color-text-primary); 
+  line-height: var(--text-leading-body);  
+}
+ 
+.modal-titulo {
+  color: var(--color-text-primary);
+}
+ 
+ 
+/* ====================
+   REGIÕES DO SERVIÇO
+   ===================== */
+ 
+.regioes-servico {
+  display:     flex;
+  align-items: center;
+  gap:         var(--spacing-pad-sm);    
+  margin:      var(--spacing-pad-smd) var(--spacing-pad-null); 
+}
+ 
+.badge-regiao {
+  background:    var(--color-accent-medium); 
+  color:         var(--color-text-dark);
+  padding:       var(--spacing-pad-xxs) var(--spacing-pad-sm); 
+  border-radius: var(--radius-md);      
+}
+ 
+ 
+/* ================
+   CAIXA DE PREÇO
+   ================= */
+ 
+.preco-box {
+  background:    var(--color-border-divider); 
+  border-radius: var(--radius-lg);            
+  padding:       var(--spacing-pad-sm);       
+  text-align:    center;
+  max-width:     320px;
+}
+ 
+.preco-box h3 {
+  margin:    var(--spacing-pad-null);
+  font-size: var(--text-size-section-title); 
+  color:     var(--color-brand-main);        
+}
+ 
+ 
+/* ================================
+   CAIXA DE INFORMAÇÕES ADICIONAIS
+   ================================ */
+ 
+.infos-box {
+  background:    var(--color-bg-secondary); 
+  border-radius: var(--radius-xl);         
+  padding:       var(--spacing-pad-md);     
+  margin-top:    var(--spacing-pad-md);     
+}
+ 
+ 
+/* ============
+   BENEFÍCIOS
+   ============ */
+ 
+.beneficios-grid {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--spacing-pad-sm);
+
+}
+ 
+.beneficio-item {
+  display:       flex;
+  gap:           var(--spacing-pad-sm);
+  margin-bottom: var(--spacing-pad-smd); 
+}
+ 
+.beneficio-card {
+  display:     flex;
+  align-items: center;
+  gap:         var(--spacing-pad-sm); 
+  padding:     var(--spacing-pad-sm); 
+  border-radius: var(--radius-lg);    
+}
+ 
+
+.numero-beneficio {
+  width:           42px;
+  height:          42px;
+  min-width:       40px;
+  border-radius:   50%;
+  background:      var(--color-text-pure-white); 
+  color:           var(--color-brand-main);      
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  font-weight:     var(--font-weight-bold);
+  flex-shrink:     0;
+}
+ 
+.beneficio-card .numero-beneficio {
+  background: var(--color-brand-secondary); 
+  color:      var(--color-text-white);
+}
+ 
+.beneficio-card p {
+  margin:      var(--spacing-pad-null);
+  color:       var(--color-text-primary);
+  line-height: var(--text-leading-compact); 
+}
+ 
+ 
+/* =============
+   INFORMAÇÕES 
+   ============== */
+ 
+.informacoes-grid {
+  display:        flex;
+  flex-direction: column;
+}
+ 
+.info-item {
+  display:     flex;
+  align-items: flex-start;
+  gap:         var(--spacing-pad-xs);   
+  margin-top:  var(--spacing-pad-md);
+  margin-bottom: var(--spacing-pad-smd);  
+}
+ 
+.info-item i {
+  margin-top: 3px; 
+  font-size:  var(--text-size-card-title); 
+}
+ 
+.info-item p {
+  margin:      var(--spacing-pad-null);
+  color:       var(--color-text-primary);
+  line-height: var(--text-leading-compact); 
+}
+ 
+.info-verde   { color: #28a745; } 
+.info-amarelo { color: #f0ad4e; }
+.info-vermelho { color: #dc3545; }
+.info-azul    { color: #0d6efd; } 
+ 
+ 
+/* ============================================================
+   BOTÃO DE AGENDAMENTO DO MODAL
+   ============================================================ */
+ 
+.btn-agendar-modal {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             var(--spacing-pad-xs);  
+  margin-top:      var(--spacing-pad-sm);  
+  padding:         14px 28px;              
+  background:      var(--color-action);    
+  color:           var(--color-text-white);
+  text-decoration: none;
+  border-radius:   var(--radius-pill);    
+  font-family:     var(--font-family-interact); 
+  font-size:       var(--text-size-small); 
+  font-weight:     var(--font-weight-medium);
+  transition:      background-color var(--ease-navigation);
+}
+ 
+.btn-agendar-modal i {
+  color: var(--color-brand-main); 
+}
+ 
+.btn-agendar-modal:hover {
+  background: var(--color-action-hover); 
+  color:      var(--color-text-white);
+}
+ 
+ 
+/* ==============
+   ============== */
+ 
+@media (max-width: 992px) {
+ 
+  .modal-body {
+    padding: var(--spacing-pad-smd); 
+  }
+ 
+  .modal-imagem {
+    height:        280px;
+    margin-bottom: var(--spacing-pad-smd); 
+  }
+ 
+  .modal-titulo {
+    text-align: center;
+    width:      100%;
+    color:      var(--color-text-primary);
+  }
+}

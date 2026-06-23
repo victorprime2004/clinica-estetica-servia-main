@@ -1,0 +1,172 @@
+/* ==================
+   AGENDAMENTO.CSS 
+   ================== */
+ 
+
+.booking-steps {
+  background: var(--color-bg-secondary);                         
+  padding:    var(--spacing-section-md) var(--spacing-pad-null); 
+}
+ 
+.titulo-steps {
+  font-size:     var(--text-size-title3);  
+  color:         var(--color-text-muted);
+  margin-bottom: var(--spacing-pad-sm);    
+  text-align:    center;
+}
+ 
+.texto-steps {
+  font-size:   var(--text-size-small);     
+  color:       var(--color-text-faded);
+  max-width:   650px;
+  line-height: var(--text-leading-compact);
+  text-align:  center;
+  margin:      var(--spacing-pad-null) auto;
+}
+ 
+/* Card de passo */
+.step-card {
+  background:      var(--color-accent-main);                       
+  border-radius:   var(--radius-md);                                
+  min-height:      290px;
+  padding:         var(--spacing-pad-md) var(--spacing-pad-smd);    
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  text-align:      center;
+}
+ 
+/* Número do passo */
+.step-numero {
+  width:           56px;
+  height:          56px;
+  border-radius:   50%;
+  background:      var(--color-text-pure-white);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  font-size:       var(--text-size-section-subtitle); 
+  color:           var(--color-brand-secondary);
+  margin-bottom:   var(--spacing-pad-smd);             
+}
+ 
+.step-card h3 {
+  font-size:     var(--text-size-section-subtitle); 
+  color:         var(--color-text-soft);
+  margin-bottom: var(--spacing-pad-sm);              
+}
+ 
+.step-card p {
+  color:       rgba(255, 255, 255, .9);
+  line-height: var(--text-leading-compact);
+  font-size:   var(--text-size-small);  
+  margin:      var(--spacing-pad-null);
+}
+ 
+/* Responsivo */
+@media (max-width: 991px) {
+ 
+  .booking-steps .container {
+    padding-left:  var(--spacing-pad-smd); 
+    padding-right: var(--spacing-pad-smd);
+  }
+ 
+  .step-card {
+    min-height: auto;
+  }
+ 
+  .titulo-steps {
+    font-size:  var(--text-size-section-title); 
+    text-align: center;
+  }
+ 
+  .texto-steps {
+    text-align: center;
+    margin:     var(--spacing-pad-null) auto;
+  }
+}
+ 
+ 
+/* ==========================
+   FORMULÁRIO DE AGENDAMENTO
+   ========================== */
+ 
+.agendamento-section {
+  background: var(--primitive-linho); 
+}
+ 
+.img-agendamento {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  display:    block;
+}
+ 
+.form-wrapper {
+  max-width: 650px;
+  padding:   var(--spacing-pad-3xl) var(--spacing-pad-lg); 
+  margin:    auto;
+}
+ 
+.form-wrapper h2 {
+  font-size:     var(--text-size-title4); 
+  color:         var(--color-text-primary);
+  margin-bottom: var(--spacing-pad-xxs);  
+}
+ 
+.form-wrapper h2 span {
+  color: var(--color-accent-gold);
+}
+ 
+.descricao {
+  font-size:     var(--text-size-small); 
+  color:         var(--color-text-faded);
+  line-height:   var(--text-leading-ui);
+  margin-bottom: var(--spacing-pad-smd); 
+  max-width:     580px;
+}
+ 
+.campo {
+  height:        46px;
+  border:        1px solid var(--color-border-divider); 
+  border-radius: var(--radius-md);                       
+  background:    transparent;
+  box-shadow:    none;
+}
+ 
+.campo:focus {
+  border-color: var(--color-border-divider);
+  box-shadow:   none;
+}
+ 
+.form-select {
+  cursor: pointer;
+}
+ 
+.checkbox-area {
+  max-width: 420px;
+  margin:    var(--spacing-pad-null) auto var(--spacing-pad-smd) auto; 
+}
+ 
+.checkbox-area label {
+  font-size:   var(--text-size-caption); 
+  color:       var(--color-text-faded);
+  line-height: var(--text-leading-compact);
+}
+ 
+/* Responsivo */
+@media (max-width: 991px) {
+ 
+  .img-agendamento {
+    height: 320px;
+  }
+ 
+  
+  .form-wrapper {
+    padding: var(--spacing-pad-lg) var(--spacing-pad-mmd);
+  }
+ 
+  .form-wrapper h2 {
+    font-size: var(--text-size-title4);
+  }
+}

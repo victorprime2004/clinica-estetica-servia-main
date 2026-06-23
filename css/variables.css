@@ -2,12 +2,15 @@
     
     /* Tipografias */
     --font-serif:    'IBM Plex Serif', Georgia, serif;
-    --font-display:  'Julius Sans One', serif;
+    --font-display:  'Julius Sans One', serif; /* Atenção: só existe peso 400 nesta fonte */
     --font-ui:       'Inter', system-ui, sans-serif;
     
     /* Pesos */
-    --font-weight-regular: 400;
-    --font-weight-medium:  500;
+   --weight-300: 300;
+    --weight-400: 400;
+    --weight-500: 500;
+    --weight-600: 600;
+    --weight-700: 700;
 
     /* Tamanjo de fontes */
     --font-size-h1:   2rem;       /* 32px */
@@ -20,13 +23,23 @@
     /* Escala de tamanhos — títulos display */
     --font-size-t1:   6rem;    /* 96px — hero desktop */
     --font-size-t2:   4rem;    /* 64px — hero mobile */
+    --font-size-t2-5: 3.25rem; /* 52px */
     --font-size-t3:   3rem;    /* 48px */
     --font-size-t4:   2.25rem; /* 36px */
 
+    /* Sombra */
+    --shadow-100: 0 1px 3px rgba(42, 34, 32, 0.08);
+    --shadow-200: 0 8px 25px rgba(42, 34, 32, 0.08);
+    --shadow-300: 0 15px 40px rgba(42, 34, 32, 0.12);
+
     /* Altura da linha */
-    --text-leading-title:  1.2;
-    --text-leading-body:   1.7;
-    --text-leading-ui:     1.5;
+    --leading-50:  1.1;
+    --leading-100: 1.2;
+    --leading-200: 1.5;
+    --leading-250: 1.6;
+    --leading-300: 1.7;
+    --leading-400: 1.8;
+    --leading-500: 2;
 
     /* PRIMITIVOS */
     --primitive-creme:             #FFF2DF;
@@ -71,28 +84,42 @@
     --primitive-fundo-formulario:  #f7f3ee;
 
     /* Espaços */
-    --space-1:  0.25rem;  /* 4px */
-    --space-2:  0.5rem;   /* 8px */
-    --space-3:  1rem;     /* 16px */
-    --space-4:  1.5rem;   /* 24px */
-    --space-5:  2rem;     /* 32px */
-    --space-6:  2.5rem;   /* 40px */
-    --space-7:  3rem;     /* 48px */
-    --space-8:  3.5rem;   /* 56px */
-    --space-9:  4rem;     /* 64px */
-    --space-10: 4.5rem;   /* 72px */
-    --space-11: 5.625rem; /* 90px */
+    --space-0:      0rem;     /* 0px */
+    --space-1:      0.25rem;  /* 4px */
+    --space-2:      0.5rem;   /* 8px */
+    --space-3:      1rem;     /* 16px */
+    --space-4:      1.5rem;   /* 24px */
+    --space-4-5:    1.875rem; /* 30px */
+    --space-5:      2rem;     /* 32px */
+    --space-6:      2.5rem;   /* 40px */
+    --space-7:      3rem;     /* 48px */
+    --space-7-5:    3.125rem; /* 50px */
+    --space-8:      3.5rem;   /* 56px */
+    --space-9:      4rem;     /* 64px */
+    --space-10:     4.5rem;   /* 72px */
+    --space-10-5:   5rem;     /* 80px */
+    --space-11:     5.625rem; /* 90px */
+    --space-12:     6.25rem;  /* 100px */
+    --space-14:     8.75rem;  /* 140px */
 
     /* Arredondamento */
     --radius-sm:    4px;
     --radius-md:    8px;
     --radius-lg:    16px;
     --radius-xl:    24px;
+    --radius-pill:  9999px;
 
     /* Transições */
     --transition-fast: 150ms ease;
     --transition-base: 300ms ease;
     --transition-slow: 400ms ease;
+
+    /* Ícones */
+    --icon-size-sm:  0.875rem;  /* 14px */
+    --icon-size-md:  1.25rem;   /* 20px */
+    --icon-size-lg:  1.875rem;  /* 30px */
+    --icon-size-xl:  2.375rem;  /* 38px */
+    --icon-size-2xl: 2.8125rem; /* 45px */
 
     /* =========================
             Semântico de Cor
@@ -120,8 +147,9 @@
     --color-bg-form:            var(--primitive-fundo-formulario); 
     --color-bg-surface-deep:    var(--primitive-expresso);        /* Ótimo para contrastar textos claros */
     
-    /* --- BORDAS E DIVISORES --- */
-    --color-border-divider:     var(--primitive-bege-medio);      /* Antigo color-divider */
+    /* --- Bordas e Divisores --- */
+    --color-border-divider:      var(--primitive-bege-medio);      /* Para fundos claros */
+    --color-border-divider-dark: rgba(255, 255, 255, 0.25);         /* Para fundos escuros */
 
     /* --- COMPLEMENTAR PRIMÁRIO (Destaques / Elementos de Atenção / Terracota) --- */
     --color-accent-lightest:    var(--primitive-rosa-nevoa);      /* Antigo primary-lightest */
@@ -157,29 +185,74 @@
     --font-family-interact:    var(--font-ui);      /* Inter para botões, menus, formulários */
 
     /* Tamanhos por Papel Executado */
-    --text-size-title1:           var(--font-size-t1); /*96px*/
-    --text-size-title2:           var(--font-size-t2); /*64px*/
-    --text-size-title3:           var(--font-size-t3); /*48px*/
-    --text-size-title4:           var(--font-size-t4); /*36px*/
-    --text-size-section-title:    var(--font-size-h1); /*32px*/
-    --text-size-section-subtitle: var(--font-size-h2); /*24px*/
-    --text-size-card-title:       var(--font-size-h3); /*18px*/
-    --text-size-body:             var(--font-size-h4); /*16px*/
-    --text-size-small:            var(--font-size-h5); /*13px*/
-    --text-size-caption:          var(--font-size-h6); /*10px*/
+    --text-size-title1:           var(--font-size-t1);      /*96px*/
+    --text-size-title2:           var(--font-size-t2);      /*64px*/
+    --text-size-title2-5:         var(--font-size-t2-5);    /*52px*/
+    --text-size-title3:           var(--font-size-t3);      /*48px*/
+    --text-size-title4:           var(--font-size-t4);      /*36px*/
+    --text-size-section-title:    var(--font-size-h1);      /*32px*/
+    --text-size-section-subtitle: var(--font-size-h2);      /*24px*/
+    --text-size-card-title:       var(--font-size-h3);      /*18px*/
+    --text-size-body:             var(--font-size-h4);      /*16px*/
+    --text-size-small:            var(--font-size-h5);      /*13px*/
+    --text-size-caption:          var(--font-size-h6);      /*10px*/
+
+    /* Altura de linha */
+    --text-leading-display:         var(--leading-50);  /* 1.1 */
+    --text-leading-title:           var(--leading-100); /* 1.2 */
+    --text-leading-ui:              var(--leading-200); /* 1.5 */
+    --text-leading-compact:         var(--leading-250); /* 1.6 */
+    --text-leading-body:            var(--leading-300); /* 1.7 */
+    --text-leading-loose:           var(--leading-400); /* 1.8 */
+    --text-leading-extra-loose:     var(--leading-500); /* 2.0 */
+
+    /*Peso de Negrito*/
+    --font-weight-light:    var(--weight-300);
+    --font-weight-regular:  var(--weight-400);
+    --font-weight-medium:   var(--weight-500);
+    --font-weight-semibold: var(--weight-600);
+    --font-weight-bold:     var(--weight-700);
+    
+    /* =====================
+        SEMÂNTICOS — Sombra
+   ========================= */
+
+    --shadow-sm: var(--shadow-100); /* Cards pequenos, inputs em foco */
+    --shadow-md: var(--shadow-200); /* Cards de avaliação, mapa */
+    --shadow-lg: var(--shadow-300); /* Imagens grandes, carousel, banners */
+
+    /* ===============================
+        SEMÂNTICOS — Tamanho de ícone
+   =================================== */
+
+    --icon-size-rating:     var(--icon-size-sm);    /* 14px */
+    --icon-size-inline:     var(--icon-size-md);    /* 20px */
+    --icon-size-toggle:     var(--icon-size-lg);    /* 30px */
+    --icon-size-feature:    var(--icon-size-xl);    /* 38px */
+    --icon-size-close:      var(--icon-size-2xl);   /* 45px */
 
     /* =========================
         Semântico de Espaçamento
     ============================ */
 
     /* Internos (Paddings) */
-    --spacing-pad-xxs:         var(--space-1); 
-    --spacing-pad-xs:          var(--space-2); 
-    --spacing-pad-sm:          var(--space-3);  
-    --spacing-pad-smd:         var(--space-4); 
-    --spacing-pad-md:          var(--space-5); 
-    --spacing-pad-lg:          var(--space-6);
-    --spacing-pad-xlg:         var(--space-7);
+    --spacing-pad-null:        var(--space-0);      /* 0px */
+    --spacing-pad-xxs:         var(--space-1);      /* 4px */
+    --spacing-pad-xs:          var(--space-2);      /* 8px */
+    --spacing-pad-sm:          var(--space-3);      /* 16px */ 
+    --spacing-pad-smd:         var(--space-4);      /* 24px */
+    --spacing-pad-mmd:        var(--space-4-5);    /* 30px */
+    --spacing-pad-md:          var(--space-5);      /* 32px */
+    --spacing-pad-lg:          var(--space-6);      /* 40px */
+    --spacing-pad-xlg:         var(--space-7);      /* 48px */
+    --spacing-pad-content:     var(--space-7-5);    /* 50px */
+    --spacing-pad-2xl:         var(--space-8);       /* 56px */
+    --spacing-pad-3xl:         var(--space-9);       /* 64px */
+    --spacing-pad-4xl:         var(--space-10);      /* 72px */
+    --spacing-pad-5xl:         var(--space-10-5);     /* 80px */
+    --spacing-section-md:      var(--space-11);      /* 90px */    
+    --spacing-section-lg:      var(--space-12);     /* 100px */
+    --spacing-hero-top:        var(--space-14);      /* 140px */
 
     /* Distâncias e Gaps */
     --spacing-gap-inline:        var(--space-2); /*8px*/
@@ -203,7 +276,6 @@
     --ease-navigation:  var(--transition-base); /* Para mudanças de estado (ex: menu abrir) */
     --ease-page-load:   var(--transition-slow); /* Para animações longas (ex: banner entrando) */
 
-    /* --- Bordas e Divisores --- */
-    --color-border-divider:      var(--primitive-bege-medio);      /* Para fundos claros */
-    --color-border-divider-dark: rgba(255, 255, 255, 0.25);         /* Para fundos escuros — ADICIONADO */
+
+    
 }

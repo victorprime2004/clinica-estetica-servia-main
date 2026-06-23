@@ -77,16 +77,58 @@ window.addEventListener("scroll", () => {
 const servicos = {
 
     massagens: [
+       {
+    nome: "Massagem Relaxante (1h)",
+
+    descricao: "Foco em alívio de tensão e bem-estar.",
+
+    descricaoCompleta:
+        "A massagem relaxante promove relaxamento muscular profundo, reduz o estresse do dia a dia e auxilia na melhora da circulação sanguínea, proporcionando sensação de bem-estar e equilíbrio corporal.",
+
+    preco: "R$ 120",
+
+    duracao: "60 minutos",
+
+    beneficios: [
+        "Reduz o estresse e a ansiedade.",
+        "Melhora a circulação sanguínea.",
+        "Promove relaxamento muscular."
+    ],
+
+    informacoes: [
         {
-            nome: "Massagem Relaxante (1h)",
-            descricao: "Foco em alívio de tensão e bem-estar.",
-            preco: "R$ 120",
-            img: "../assets/images/services/img-massagem.jpg"
+            icone: "fa-circle-check",
+            classe: "info-verde",
+            texto: "Indicado para pessoas com tensão muscular e rotina estressante."
         },
+
+        {
+            icone: "fa-triangle-exclamation",
+            classe: "info-amarelo",
+            texto: "Evitar em casos de inflamações agudas ou lesões recentes."
+        },
+
+        {
+            icone: "fa-heart",
+            classe: "info-vermelho",
+            texto: "Recomenda-se boa hidratação após a sessão."
+        },
+
+        {
+            icone: "fa-clock",
+            classe: "info-azul",
+            texto: "Os benefícios podem ser percebidos já na primeira sessão."
+        }
+    ],
+
+    img: "../assets/images/services/img-massagem.jpg"
+},
         {
             nome: "Massagem Modeladora Br",
             descricao: "Contorno corporal e redução de medidas.",
             preco: "R$ 150",
+             beneficios: [],
+            informacoes: [],
             img: "../assets/images/services/img-massagem.jpg"
         },
         {
@@ -147,25 +189,25 @@ const servicos = {
             nome: "Limpeza de Pele Profunda",
             descricao: "Renovação facial.",
             preco: "R$ 120",
-            img: "../assets/images/services/img-limpeza de pele.jpg"
+            img: "../assets/images/services/img-limpeza-de-pele.jpg"
         },
         {
             nome: "Peeling de Diamante",
             descricao: "Brilho e rejuvenescimento.",
             preco: "R$ 180",
-            img: "../assets/images/services/img-limpeza de pele.jpg"
+            img: "../assets/images/services/img-limpeza-de-pele.jpg"
         },
         {
             nome: "Drenagem Facial",
             descricao: "Redução de inchaço.",
             preco: "R$ 100",
-            img: "../assets/images/services/img-limpeza de pele.jpg"
+            img: "../assets/images/services/img-limpeza-de-pele.jpg"
         },
         {
             nome: "Design e Limpeza de Sobrancelhas",
             descricao: "Harmonização do olhar.",
             preco: "R$ 80",
-            img: "../assets/images/services/img-limpeza de pele.jpg"
+            img: "../assets/images/services/img-limpeza-de-pele.jpg"
         }
     ],
 
@@ -174,25 +216,25 @@ const servicos = {
             nome: "Depilação Completa de Pernas",
             descricao: "Pele lisa e macia.",
             preco: "R$ 90",
-            img: "../assets/images/services/img-depilação.jpg"
+            img: "../assets/images/services/img-depilacao.jpg"
         },
         {
             nome: "Depilação Íntima",
             descricao: "Conforto e cuidado.",
             preco: "R$ 70",
-            img: "../assets/images/services/img-depilação.jpg"
+            img: "../assets/images/services/img-depilacao.jpg"
         },
         {
             nome: "Depilação de Axilas",
             descricao: "Resultado duradouro.",
             preco: "R$ 35",
-            img: "../assets/images/services/img-depilação.jpg"
+            img: "../assets/images/services/img-depilacao.jpg"
         },
         {
             nome: "Depilação de Nariz",
             descricao: "Procedimento rápido.",
             preco: "R$ 20",
-            img: "../assets/images/services/img-depilação.jpg"
+            img: "../assets/images/services/img-depilacao.jpg"
         }
     ]
 
@@ -200,10 +242,6 @@ const servicos = {
 
 const carouselContent =
     document.getElementById("carousel-content");
-
-if (carouselContent) {
-    renderizar("massagens");
-}
 
 function renderizar(categoria) {
 
@@ -244,10 +282,12 @@ function renderizar(categoria) {
 
                 <span class="preco-servico">${servico.preco}</span>
 
-                <a href="#" class="btn-vermais">
-                    Ver Mais
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <a href="#"
+   class="btn-vermais abrir-modal"
+   data-servico='${JSON.stringify(servico)}'>
+    Ver Mais
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
 
             </div>
 
@@ -295,5 +335,89 @@ document
 
     });
 
+document.addEventListener("click", function (e) {
 
+    const botao = e.target.closest(".abrir-modal");
 
+    if (!botao) return;
+
+    e.preventDefault();
+
+    const servico =
+        JSON.parse(botao.dataset.servico);
+
+    document.getElementById("modalTitulo").textContent =
+        servico.nome;
+
+    document.getElementById("modalDescricao").textContent =
+        servico.descricaoCompleta || servico.descricao;
+
+    document.getElementById("modalPreco").textContent =
+        servico.preco;
+
+    document.getElementById("modalDuracao").textContent =
+        servico.duracao || "Consultar";
+
+    document.getElementById("modalImagem").src =
+        servico.img;
+
+        const beneficios =
+    document.getElementById("modalBeneficios");
+
+beneficios.innerHTML = "";
+
+if (servico.beneficios) {
+
+    servico.beneficios.forEach((item, index) => {
+
+        beneficios.innerHTML += `
+            <div class="beneficio-card">
+
+                <div class="numero-beneficio">
+                    ${index + 1}
+                </div>
+
+                <p>${item}</p>
+
+            </div>
+        `;
+    });
+
+}
+
+const informacoes =
+    document.getElementById("modalInformacoes");
+
+informacoes.innerHTML = "";
+
+if (servico.informacoes) {
+
+    servico.informacoes.forEach(info => {
+
+        informacoes.innerHTML += `
+            <div class="info-item">
+
+                <i class="fa-solid ${info.icone} ${info.classe}"></i>
+
+                <p>${info.texto}</p>
+
+            </div>
+        `;
+    });
+
+}
+
+    
+
+ 
+
+    const modal =
+        new bootstrap.Modal(
+            document.getElementById("modalServico")
+        );
+
+    modal.show();
+
+});
+
+// modal

@@ -1,0 +1,94 @@
+/* ============================================================
+   SECTION CONTATO
+   ============================================================ */
+ 
+.section-contato {
+  padding:    var(--spacing-section-lg) var(--spacing-pad-null); /* 100px */
+  background: var(--color-bg-secondary);
+}
+ 
+/* Título */
+.contato-info h2 {
+  font-size:     var(--text-size-title4);      /* 36px */
+  color:         var(--color-text-primary);
+  margin-bottom: var(--spacing-pad-md);         /* 32px */
+  line-height:   var(--text-leading-title);
+}
+ 
+/* Span dourado no título */
+.contato-info h2 span {
+  color: var(--color-accent-gold);
+}
+ 
+/* Descrição */
+.descricao {
+  font-size:     var(--text-size-body);        /* 16px */
+  line-height:   var(--text-leading-loose);
+  color:         var(--color-text-primary);
+  margin-bottom: var(--spacing-pad-smd);        /* 24px */
+}
+ 
+/* Lista de contato */
+.lista-contato {
+  list-style:    none;
+  padding:       var(--spacing-pad-null);
+  margin-bottom: var(--spacing-pad-xlg);        /* 48px */
+}
+ 
+.lista-contato li {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--spacing-pad-sm);         /* 16px */
+  margin-bottom: var(--spacing-pad-sm);         /* 16px */
+  color:         var(--color-text-primary);
+  font-size:     var(--text-size-body);
+}
+ 
+.lista-contato i {
+  color: var(--color-accent-gold);
+}
+ 
+/* Horários */
+.horarios h3 {
+  font-size:     var(--text-size-card-title);  /* 18px */
+  color:         var(--color-text-dark);
+  margin-bottom: var(--spacing-pad-sm);         /* 16px */
+}
+ 
+.horarios p {
+  margin-bottom: var(--spacing-pad-xs);         /* 8px */
+  color:         var(--color-text-primary);
+}
+ 
+/* Mapa */
+.mapa-container {
+  border-radius: var(--radius-xl);
+  overflow:      hidden;
+  box-shadow:    var(--shadow-md);
+}
+ 
+.mapa-container iframe {
+  width:   100%;
+  height:  450px;
+  border:  none;
+  display: block;
+}
+ 
+/* Responsivo */
+@media (max-width: 768px) {
+  .section-contato {
+    padding: var(--spacing-pad-5xl) var(--spacing-pad-smd); /* 80px */
+  }
+ 
+  .contato-info {
+    text-align: center;
+  }
+ 
+  .lista-contato li {
+    justify-content: center;
+  }
+ 
+  .mapa-container iframe {
+    height: 320px;
+  }
+}

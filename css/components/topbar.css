@@ -3,7 +3,7 @@
 .banner-topbar {
   width:    100%;
   position: absolute;
-  top:      105px;
+  top:      var(--spacing-section-lg);
   left:     0;
   z-index:  3;
 }
@@ -28,6 +28,7 @@
   color:       var(--color-text-muted);
   white-space: nowrap;
 }
+
 
 .banner-topbar-content i {
   color:     var(--color-brand-medium);
